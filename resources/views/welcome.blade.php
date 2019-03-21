@@ -125,7 +125,7 @@
         width: 400px;
     }
 
-    .slidecontainer {
+    <!-- .slidecontainer {
         width: 100%;
         /* Width of the outside container */
     }
@@ -247,7 +247,7 @@
         height: 50px;
         width: 100px;
         background-color: #555;
-    }
+    } -->
 </style>
 
 <head>
@@ -269,11 +269,11 @@
             </div>
 
             <!--Slider Zone-->
-            <div class="slidecontainer ">
+            <!-- <div class="slidecontainer ">
                 <input type="range" min="1" max="100" value="69" class="slider" id="Range_Input">
                 <p>Value: <span id="Range_Output"></span></p>
 
-            </div>
+            </div> -->
             <canvas id="canvas1" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
             <div id="time-range">
                 <p>Time : <span class="slider-time">9:00 AM</span></p>
@@ -347,7 +347,7 @@
                         
                         // var c = document.getElementById('canvas1');
                         var c = $('#canvas1');
-                        var context = c.getContext('2d');
+                        var context = c[0].getContext('2d');
                         if (ui.values[0] > 1000) {
                             context.fillStyle = "#99ff99";
                             context.fillRect(30, 30, 200, 100);
@@ -358,17 +358,17 @@
                     }
                 });
                 //sliderScript
-                var slider = document.getElementById("Range_Input");
-                var output = document.getElementById("Range_Output");
-                output.innerHTML = slider.value; // Display the default slider value
+                // var slider = document.getElementById("Range_Input");
+                // var output = document.getElementById("Range_Output");
+                // output.innerHTML = slider.value; // Display the default slider value
 
                 // Update the current slider value (each time you drag the slider handle)
-                slider.oninput = function() {
-                    output.innerHTML = this.value;
-                    var c = document.getElementById('canvas1');
-                    var context = c.getContext('2d');
-                    var slider = document.getElementById("Range_Input");
-                    var v = document.getElementById('Range_Output').innerHTML;
+                // slider.oninput = function() {
+                //     output.innerHTML = this.value;
+                //     var c = document.getElementById('canvas1');
+                //     var context = c.getContext('2d');
+                //     var slider = document.getElementById("Range_Input");
+                //     var v = document.getElementById('Range_Output').innerHTML;
 
                     // if (this.value == '69') {
                     //     context.fillStyle = "#99ff99";
@@ -377,7 +377,7 @@
                     //     context.fillStyle = "#ff0000";
                     //     context.fillRect(30, 30, 200, 100);
                     // }
-                }
+                // }
             </script>
 
         </div>
