@@ -181,12 +181,7 @@
                 }
             </script>
 
-            <!--Rectangle Zone-->
-
-          
-
         </div>
-
 
     </div>
 </body>
