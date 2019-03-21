@@ -345,7 +345,8 @@
 
                         $('.slider-time2').html(hours2 + ':' + minutes2);
                         
-                        var c = document.getElementById('canvas1');
+                        // var c = document.getElementById('canvas1');
+                        var c = $('#canvas1');
                         var context = c.getContext('2d');
                         if (ui.values[0] > 1000) {
                             context.fillStyle = "#99ff99";
