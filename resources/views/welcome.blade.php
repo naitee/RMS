@@ -154,10 +154,11 @@
             <div class="slidecontainer ">
                 <input type="range" min="1" max="100" value="69" class="slider" id="Range_Input">
                 <p>Value: <span id="Range_Output"></span></p>
-                
+
             </div>
             <canvas id="canvas1" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
-            <script>//sliderScript
+            <script>
+                //sliderScript
                 var slider = document.getElementById("Range_Input");
                 var output = document.getElementById("Range_Output");
                 output.innerHTML = slider.value; // Display the default slider value
@@ -165,35 +166,24 @@
                 // Update the current slider value (each time you drag the slider handle)
                 slider.oninput = function() {
                     output.innerHTML = this.value;
-                }
+                    var c = document.getElementById('canvas1');
+                    var context = c.getContext('2d');
+                    var slider = document.getElementById("Range_Input");
+                    var v = document.getElementById('Range_Output').innerHTML;
 
-                
+                    if (this.value == '69') {
+                        context.fillStyle = "#99ff99";
+                        context.fillRect(30, 30, 200, 100);
+                    } else {
+                        context.fillStyle = "#ff0000";
+                        context.fillRect(30, 30, 200, 100);
+                    }
+                }
             </script>
 
             <!--Rectangle Zone-->
-           
-            <script>
-                var c=document.getElementById('canvas1');
-                var context=c.getContext('2d');
-                var slider = document.getElementById("Range_Input");
-                var v=document.getElementById('Range_Output').innerHTML;
-                
-                v = slider.value;
-                document.write(v.innerHTML)
-                
-                slider.oninput = function(){
-                    v = this.value;
-                }
-                
-                if(v == '69'){
-                    context.fillStyle = "#99ff99";
-                    context.fillRect(30, 30, 200, 100);
-                } else {
-                    context.fillStyle = "#ff0000";
-                    context.fillRect(30, 30, 200, 100);
-                }
-                
-            </script>
+
+          
 
         </div>
 
