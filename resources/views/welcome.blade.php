@@ -125,7 +125,7 @@
         width: 400px;
     }
 
-    <!-- .slidecontainer {
+    < !-- .slidecontainer {
         width: 100%;
         /* Width of the outside container */
     }
@@ -247,7 +247,7 @@
         height: 50px;
         width: 100px;
         background-color: #555;
-    } -->
+    }
 </style>
 
 <head>
@@ -267,32 +267,191 @@
             <div class="title m-b-md links">
                 Room Monitoring System
             </div>
+                
+            <img src="{{url('images/4floor.jpg ')}} ">
 
-            <!--Slider Zone-->
-            <!-- <div class="slidecontainer ">
-                <input type="range" min="1" max="100" value="69" class="slider" id="Range_Input">
-                <p>Value: <span id="Range_Output"></span></p>
-
-            </div> -->
-            <canvas id="canvas1" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
-            <div id="time-range">
-                <p>Time : <span class="slider-time">9:00 AM</span></p>
-                <div class="sliders_step1">
-                    <div id="slider-range"></div>
+            <!-- 402 -->
+            <div>
+                <div id='Blog402' style="position:absolute; top:103px; right:64px; z-index:3">
+                    <canvas id="canvas402" width="96" height="220" position="Center"></canvas>
+                </div>
+                <div id='Character402' style="position:absolute; top:110px; right:70px; z-index:3">
+                    <h1>402</h1>
                 </div>
             </div>
+
+            <!-- 401 -->
+            <div>
+                <div id='Blog401' style="position:absolute; top:103px; right:133px; z-index:3">
+                    <canvas id="canvas401" width="95" height="220" position="Center"></canvas>
+                </div>
+                <div id='Character402' style="position:absolute; top:110px; right:139px; z-index:3">
+                    <h1>401</h1>
+                </div>
+            </div>
+
+            <!-- 422 -->
+            <div>
+                <div id='Blog422' style="position:absolute; top:102px; right:202px; z-index:3">
+                    <canvas id="canvas422" width="97" height="98" position="Center"></canvas>
+                </div>
+                <div id='Character422' style="position:absolute; top:110px; right:208px; z-index:3">
+                    <h1>422</h1>
+                </div>
+            </div>
+
+            <!-- 415 -->
+            <div>
+                <div id='Blog415' style="position:absolute; top:239px; right:265px; z-index:3">
+                    <canvas id="canvas415" width="95" height="98" position="Center"></canvas>
+                </div>
+                <div id='Character415' style="position:absolute; top:245px; right:268px; z-index:3">
+                    <h1>415</h1>
+                </div>
+            </div>
+
+            <!-- LIL -->
+            <div>
+                <div id='BlogLIL' style="position:absolute; top:239px; right:334px; z-index:3">
+                    <canvas id="canvasLIL" width="99" height="98" position="Center"></canvas>
+                </div>
+                <div id='CharacterLIL' style="position:absolute; top:245px; right:345px; z-index:3">
+                    <h1>LIL</h1>
+                </div>
+            </div>
+
+            <!-- DentLab -->
+            <div>
+                <div id='BlogDent' style="position:absolute; top:307px; right:407px; z-index:3">
+                    <canvas id="canvasDent" width="96" height="77" position="Center"></canvas>
+                </div>
+                <div id='CharacterDent' style="position:absolute; top:313px; right:413px; z-index:3">
+                    <h2>Dent</h2>
+                </div>
+            </div>
+
+            <!-- 413 -->
+            <div>
+                <div id='Blog413' style="position:absolute; top:358px; right:407px; z-index:3">
+                    <canvas id="canvas413" width="96" height="111" position="Center"></canvas>
+                </div>
+                <div id='Character413' style="position:absolute; top:360px; right:410px; z-index:3">
+                    <h1>413</h1>
+                </div>
+            </div>
+
+            <!-- 412 -->
+            <div>
+                <div id='Blog412' style="position:absolute; top:443px; right:322px; z-index:3">
+                    <canvas id="canvas412" width="80" height="101" position="Center"></canvas>
+                </div>
+                <div id='Character412' style="position:absolute; top:450px; right:326px; z-index:3">
+                    <h2>412</h2>
+                </div>
+            </div>
+
+            <!-- LAB -->
+            <div>
+                <div id='BlogLAB' style="position:absolute; top:443px; right:261px; z-index:3">
+                    <canvas id="canvasLAB" width="88" height="101" position="Center"></canvas>
+                </div>
+                <div id='CharacterLAB' style="position:absolute; top:450px; right:266px; z-index:3">
+                    <h2>LAB</h2>
+                </div>
+            </div>
+
+            <!-- 411-->
+            <div>
+                <div id='Blog411' style="position:absolute; top:443px; right:200px; z-index:3">
+                    <canvas id="canvas411" width="88" height="101" position="Center"></canvas>
+                </div>
+                <div id='Character411' style="position:absolute; top:450px; right:205px; z-index:3">
+                    <h2>411</h2>
+                </div>
+            </div>
+
+            <!-- 414-->
+            <div>
+                <div id='Blog414' style="position:absolute; top:343px; right:334px; z-index:3">
+                    <canvas id="canvas414" width="65" height="95" position="Center"></canvas>
+                </div>
+                <div id='Character414' style="position:absolute; top:355px; right:335px; z-index:3">
+                    <h3>414</h3>
+                </div>
+            </div>
+
+            <!-- 410-->
+            <div>
+                <div id='Blog410' style="position:absolute; top:417px; right:168px; z-index:3">
+                    <canvas id="canvas410" width="63" height="58" position="Center"></canvas>
+                </div>
+                <div id='Character410' style="position:absolute; top:425px; right:170px; z-index:3">
+                    <h4>410</h4>
+                </div>
+            </div>
+
+            <!-- 409-->
+            <div>
+                <div id='Blog409' style="position:absolute; top:405px; right:130px; z-index:3">
+                    <canvas id="canvas409" width="63" height="70" position="Center"></canvas>
+                </div>
+                <div id='Character409' style="position:absolute; top:412px; right:133px; z-index:3">
+                    <h4>409</h4>
+                </div>
+            </div>
+            
+            <!-- 403 -->
+            <div>
+                <div id='Blog403' style="position:absolute; top:240px; right:64px; z-index:3">
+                    <canvas id="canvas403" width="82" height="56" position="Center"></canvas>
+                </div>
+                <div id='Character403' style="position:absolute; top:250px; right:73px; z-index:3">
+                    <h3>403</h3>
+                </div>
+            </div>
+
+            <!-- 404 -->
+            <div>
+                <div id='Blog404' style="position:absolute; top:269px; right:64px; z-index:3">
+                    <canvas id="canvas404" width="72" height="70" position="Center"></canvas>
+                </div>
+                <div id='Character404' style="position:absolute; top:280px; right:67px; z-index:3">
+                    <h3>404</h3>
+                </div>
+            </div>
+
+
+            <div id='Character404' style="position:absolute; top:580px; right:250px; z-index:3">
+                <h1 >4th Floor</h1>
+                </div>
+            
+
+            <br>
+            <br>
+            <!-- Slider -->
+            <div>
+                <div id="time-range">
+                    <p>Time : <span class="slider-time">9:00 AM</span></p>
+                    <div class="sliders_step1">
+                        <div id="slider-range"></div>
+                    </div>
+                </div>
+            </div>
+
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+
             <script>
                 // FARM SCRIPT######################################
                 $("#slider-range").slider({
                     // range: true,
-                    min: 0,
-                    max: 1440,
-                    step: 15,
+                    min: 480,
+                    max: 1080,
+                    step: 30,
                     values: [540],
                     slide: function(e, ui) {
-                        
+
                         var timecon = Math.floor(ui.values[0])
 
                         var hours1 = Math.floor(ui.values[0] / 60);
@@ -344,40 +503,179 @@
 
 
                         $('.slider-time2').html(hours2 + ':' + minutes2);
-                        
-                        // var c = document.getElementById('canvas1');
-                        var c = $('#canvas1');
+
+                        // 402
+                        var c = $('#canvas402');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] > 1000) {
+                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
                             context.fillStyle = "#99ff99";
                             context.fillRect(30, 30, 200, 100);
                         } else {
                             context.fillStyle = "#ff0000";
                             context.fillRect(30, 30, 200, 100);
                         }
+
+                        // 401 
+                        var c = $('#canvas401');
+                        var context = c[0].getContext('2d');
+                            context.fillStyle = "#ff0000";
+                            context.fillRect(30, 30, 200, 100);
+
+                        // 422 
+                        var c = $('#canvas422');
+                        var context = c[0].getContext('2d');
+                            context.fillStyle = "#ff0000";
+                            context.fillRect(30, 30, 200, 100);
+
+                        // 415 
+                        var c = $('#canvas415');
+                        var context = c[0].getContext('2d');
+                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else {
+                            context.fillStyle = "#ff0000";
+                            context.fillRect(30, 30, 200, 100);
+                        }
+
+                        // LIL 
+                        var c = $('#canvasLIL');
+                        var context = c[0].getContext('2d');
+                            context.fillStyle = "#ff0000";
+                            context.fillRect(30, 30, 200, 100);
+
+                        // Dent 
+                        var c = $('#canvasDent');
+                        var context = c[0].getContext('2d');
+                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else {
+                            context.fillStyle = "#ff0000";
+                            context.fillRect(30, 30, 200, 100);
+                        }
+
+                        // 413
+                        var c = $('#canvas413');
+                        var context = c[0].getContext('2d');
+                            context.fillStyle = "#ff0000";
+                            context.fillRect(30, 30, 200, 100);
+
+                        // 412
+                        var c = $('#canvas412');
+                        var context = c[0].getContext('2d');
+                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else {
+                            context.fillStyle = "#ff0000";
+                            context.fillRect(30, 30, 200, 100);
+                        }
+
+                        // LAB
+                        var c = $('#canvasLAB');
+                        var context = c[0].getContext('2d');
+                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else {
+                            context.fillStyle = "#ff0000";
+                            context.fillRect(30, 30, 200, 100);
+                        }
+
+                        // 411
+                        var c = $('#canvas411');
+                        var context = c[0].getContext('2d');
+                            context.fillStyle = "#ff0000";
+                            context.fillRect(30, 30, 200, 100);
+
+                        // 414
+                        var c = $('#canvas414');
+                        var context = c[0].getContext('2d');
+                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else {
+                            context.fillStyle = "#ff0000";
+                            context.fillRect(30, 30, 200, 100);
+                        }
+
+                        // 410
+                        var c = $('#canvas410');
+                        var context = c[0].getContext('2d');
+                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else {
+                            context.fillStyle = "#ff0000";
+                            context.fillRect(30, 30, 200, 100);
+                        }
+
+                        // 409
+                        var c = $('#canvas409');
+                        var context = c[0].getContext('2d');
+                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else {
+                            context.fillStyle = "#ff0000";
+                            context.fillRect(30, 30, 200, 100);
+                        }
+
+                        // 403
+                        var c = $('#canvas403');
+                        var context = c[0].getContext('2d');
+                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else {
+                            context.fillStyle = "#ff0000";
+                            context.fillRect(30, 30, 200, 100);
+                        }
+
+                        // 404
+                        var c = $('#canvas404');
+                        var context = c[0].getContext('2d');
+                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
+                            context.fillStyle = "#99ff99";
+                            context.fillRect(30, 30, 200, 100);
+                        } else {
+                            context.fillStyle = "#ff0000";
+                            context.fillRect(30, 30, 200, 100);
+                        }
+
                     }
                 });
-                //sliderScript
-                // var slider = document.getElementById("Range_Input");
-                // var output = document.getElementById("Range_Output");
-                // output.innerHTML = slider.value; // Display the default slider value
-
-                // Update the current slider value (each time you drag the slider handle)
-                // slider.oninput = function() {
-                //     output.innerHTML = this.value;
-                //     var c = document.getElementById('canvas1');
-                //     var context = c.getContext('2d');
-                //     var slider = document.getElementById("Range_Input");
-                //     var v = document.getElementById('Range_Output').innerHTML;
-
-                    // if (this.value == '69') {
-                    //     context.fillStyle = "#99ff99";
-                    //     context.fillRect(30, 30, 200, 100);
-                    // } else {
-                    //     context.fillStyle = "#ff0000";
-                    //     context.fillRect(30, 30, 200, 100);
-                    // }
-                // }
             </script>
 
         </div>
@@ -385,4 +683,4 @@
     </div>
 </body>
 
-</html> 
+</html>
