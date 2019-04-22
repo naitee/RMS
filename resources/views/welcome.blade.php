@@ -248,11 +248,25 @@
         width: 100px;
         background-color: #555;
     }
+
+    .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
 </style>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     <title>Room Monitoring System</title>
 
@@ -335,7 +349,16 @@
                 </div>
             </div>
 
-            <!-- Color Explain -->
+            <!-- Button -->
+            <div>
+            <div id='BlogButton' style="position:absolute; top:450px; right:-185px; z-index:3">
+                        <div><a href="#" class="button">4th Floor</a></div>
+                        <div><a href="#" class="button">5th Floor</a></div>
+            </div>
+
+            
+            
+                    <!-- Color Explain -->
             <script>
                 // AJ Room
                 var c = document.getElementById("canvasAJ");
@@ -533,11 +556,12 @@
                 </div>
             </div>
 
-            <div id='Character404' style="position:absolute; top:580px; right:245px; z-index:3">
+            <div id='4th_floor' style="position:absolute; top:580px; right:245px; z-index:3">
                 <h1>4th Floor</h1>
             </div>
 
             <br>
+
 
             <p>Date: <span id="datetime"></span></p>
             <script>
@@ -686,16 +710,9 @@
                         // 412
                         var c = $('#canvas412');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 200, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 200, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 200, 100);
-                        }
+                        context.fillStyle = "#800080";
+                        context.fillRect(30, 30, 200, 100);
+
 
                         // LAB
                         var c = $('#canvasLAB');
@@ -765,6 +782,7 @@
         </div>
 
     </div>
+
 </body>
 
 </html>
