@@ -254,7 +254,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Room Monitoring System</title>
 
 
 </head>
@@ -264,170 +264,288 @@
 
         <div class="top-left">
 
+
+
             <div class="title m-b-md links">
                 Room Monitoring System
             </div>
-                
-            <img src="{{url('images/4floor.jpg ')}} ">
+            <div><img src="{{url('images/4floor.jpg ')}} "></div>
+            <div></div>
 
-            <!-- 402 -->
+            <!-- Color Room Blog -->
             <div>
-                <div id='Blog402' style="position:absolute; top:103px; right:64px; z-index:3">
-                    <canvas id="canvas402" width="96" height="220" position="Center"></canvas>
+                <!-- AJ room -->
+                <div>
+                    <div id='BlogAJ' style="position:absolute; top:100px; right:-100px; z-index:3">
+                        <canvas id="canvasAJ" width="75" height="75" position="Center"></canvas>
+                    </div>
+                    <div id='CharacterAJ' style="position:absolute; top:120px; right:-250px; z-index:3">
+                        <h3>ห้องพักอาจารย์</h3>
+                    </div>
                 </div>
-                <div id='Character402' style="position:absolute; top:110px; right:70px; z-index:3">
-                    <h1>402</h1>
+
+                <!-- LAB -->
+                <div>
+                    <div id='BlogLAB' style="position:absolute; top:150px; right:-100px; z-index:3">
+                        <canvas id="canvasLABdemo" width="75" height="75" position="Center"></canvas>
+                    </div>
+                    <div id='CharacterLABdemo' style="position:absolute; top:170px; right:-195px; z-index:3">
+                        <h3>ห้องแลป</h3>
+                    </div>
+                </div>
+
+                <!-- Busy -->
+                <div>
+                    <div id='BlogBusy' style="position:absolute; top:200px; right:-100px; z-index:3">
+                        <canvas id="canvasBusy" width="75" height="75" position="Center"></canvas>
+                    </div>
+                    <div id='CharacterBusy' style="position:absolute; top:220px; right:-175px; z-index:3">
+                        <h3>ไม่ว่าง</h3>
+                    </div>
+                </div>
+
+                <!-- Avaible -->
+                <div>
+                    <div id='BlogAvai' style="position:absolute; top:250px; right:-100px; z-index:3">
+                        <canvas id="canvasAvai" width="75" height="75" position="Center"></canvas>
+                    </div>
+                    <div id='CharacterBusy' style="position:absolute; top:270px; right:-155px; z-index:3">
+                        <h3>ว่าง</h3>
+                    </div>
+                </div>
+
+                <!-- Shop -->
+                <div>
+                    <div id='BlogShop' style="position:absolute; top:300px; right:-100px; z-index:3">
+                        <canvas id="canvasShop" width="75" height="75" position="Center"></canvas>
+                    </div>
+                    <div id='CharacterShop' style="position:absolute; top:320px; right:-255px; z-index:3">
+                        <h3>ร้านค้านักศึกษา</h3>
+                    </div>
+                </div>
+
+                <!-- Student Room -->
+                <div>
+                    <div id='BlogStudent' style="position:absolute; top:350px; right:-100px; z-index:3">
+                        <canvas id="canvasStudent" width="75" height="75" position="Center"></canvas>
+                    </div>
+                    <div id='CharacterStudent' style="position:absolute; top:370px; right:-235px; z-index:3">
+                        <h3>ห้องนักศึกษา</h3>
+                    </div>
                 </div>
             </div>
 
-            <!-- 401 -->
+            <!-- Color Explain -->
+            <script>
+                // AJ Room
+                var c = document.getElementById("canvasAJ");
+                var ctx = c.getContext("2d");
+                ctx.rect(30, 30, 200, 200);
+                ctx.fillStyle = "#0000FF";
+                ctx.fill();
+
+                // LAB Room
+                var c = document.getElementById("canvasLABdemo");
+                var ctx = c.getContext("2d");
+                ctx.rect(30, 30, 200, 200);
+                ctx.fillStyle = "#800080";
+                ctx.fill();
+
+                // Busy
+                var c = document.getElementById("canvasBusy");
+                var ctx = c.getContext("2d");
+                ctx.rect(30, 30, 200, 200);
+                ctx.fillStyle = "#FF0000";
+                ctx.fill();
+
+                // Avaible
+                var c = document.getElementById("canvasAvai");
+                var ctx = c.getContext("2d");
+                ctx.rect(30, 30, 200, 200);
+                ctx.fillStyle = "#99ff99";
+                ctx.fill();
+
+                // Shop
+                var c = document.getElementById("canvasShop");
+                var ctx = c.getContext("2d");
+                ctx.rect(30, 30, 200, 200);
+                ctx.fillStyle = "#800000";
+                ctx.fill();
+
+                // Student Room
+                var c = document.getElementById("canvasStudent");
+                var ctx = c.getContext("2d");
+                ctx.rect(30, 30, 200, 200);
+                ctx.fillStyle = "#FFA500";
+                ctx.fill();
+            </script>
+
+            <!-- Room -->
             <div>
-                <div id='Blog401' style="position:absolute; top:103px; right:133px; z-index:3">
-                    <canvas id="canvas401" width="95" height="220" position="Center"></canvas>
+                <!-- 402 -->
+                <div>
+                    <div id='Blog402' style="position:absolute; top:103px; right:64px; z-index:3">
+                        <canvas id="canvas402" width="96" height="220" position="Center"></canvas>
+                    </div>
+                    <div id='Character402' style="position:absolute; top:110px; right:70px; z-index:3">
+                        <h1>402</h1>
+                    </div>
                 </div>
-                <div id='Character402' style="position:absolute; top:110px; right:139px; z-index:3">
-                    <h1>401</h1>
+
+                <!-- 401 -->
+                <div>
+                    <div id='Blog401' style="position:absolute; top:103px; right:133px; z-index:3">
+                        <canvas id="canvas401" width="95" height="220" position="Center"></canvas>
+                    </div>
+                    <div id='Character402' style="position:absolute; top:110px; right:139px; z-index:3">
+                        <h1>401</h1>
+                    </div>
+                </div>
+
+                <!-- 422 -->
+                <div>
+                    <div id='Blog422' style="position:absolute; top:102px; right:202px; z-index:3">
+                        <canvas id="canvas422" width="97" height="98" position="Center"></canvas>
+                    </div>
+                    <div id='Character422' style="position:absolute; top:110px; right:208px; z-index:3">
+                        <h1>422</h1>
+                    </div>
+                </div>
+
+                <!-- 415 -->
+                <div>
+                    <div id='Blog415' style="position:absolute; top:239px; right:265px; z-index:3">
+                        <canvas id="canvas415" width="95" height="98" position="Center"></canvas>
+                    </div>
+                    <div id='Character415' style="position:absolute; top:245px; right:268px; z-index:3">
+                        <h1>415</h1>
+                    </div>
+                </div>
+
+                <!-- LIL -->
+                <div>
+                    <div id='BlogLIL' style="position:absolute; top:239px; right:334px; z-index:3">
+                        <canvas id="canvasLIL" width="99" height="98" position="Center"></canvas>
+                    </div>
+                    <div id='CharacterLIL' style="position:absolute; top:245px; right:345px; z-index:3">
+                        <h1>LIL</h1>
+                    </div>
+                </div>
+
+                <!-- DentLab -->
+                <div>
+                    <div id='BlogDent' style="position:absolute; top:307px; right:407px; z-index:3">
+                        <canvas id="canvasDent" width="96" height="77" position="Center"></canvas>
+                    </div>
+                    <div id='CharacterDent' style="position:absolute; top:313px; right:413px; z-index:3">
+                        <h2>Dent</h2>
+                    </div>
+                </div>
+
+                <!-- 413 -->
+                <div>
+                    <div id='Blog413' style="position:absolute; top:358px; right:407px; z-index:3">
+                        <canvas id="canvas413" width="96" height="111" position="Center"></canvas>
+                    </div>
+                    <div id='Character413' style="position:absolute; top:360px; right:410px; z-index:3">
+                        <h1>413</h1>
+                    </div>
+                </div>
+
+                <!-- 412 -->
+                <div>
+                    <div id='Blog412' style="position:absolute; top:443px; right:322px; z-index:3">
+                        <canvas id="canvas412" width="80" height="101" position="Center"></canvas>
+                    </div>
+                    <div id='Character412' style="position:absolute; top:450px; right:326px; z-index:3">
+                        <h2>412</h2>
+                    </div>
+                </div>
+
+                <!-- LAB -->
+                <div>
+                    <div id='BlogLAB' style="position:absolute; top:443px; right:261px; z-index:3">
+                        <canvas id="canvasLAB" width="88" height="101" position="Center"></canvas>
+                    </div>
+                    <div id='CharacterLAB' style="position:absolute; top:450px; right:266px; z-index:3">
+                        <h2>LAB</h2>
+                    </div>
+                </div>
+
+                <!-- 411-->
+                <div>
+                    <div id='Blog411' style="position:absolute; top:443px; right:200px; z-index:3">
+                        <canvas id="canvas411" width="88" height="101" position="Center"></canvas>
+                    </div>
+                    <div id='Character411' style="position:absolute; top:450px; right:205px; z-index:3">
+                        <h2>411</h2>
+                    </div>
+                </div>
+
+                <!-- 414-->
+                <div>
+                    <div id='Blog414' style="position:absolute; top:343px; right:334px; z-index:3">
+                        <canvas id="canvas414" width="65" height="95" position="Center"></canvas>
+                    </div>
+                    <div id='Character414' style="position:absolute; top:355px; right:335px; z-index:3">
+                        <h3>414</h3>
+                    </div>
+                </div>
+
+                <!-- 410-->
+                <div>
+                    <div id='Blog410' style="position:absolute; top:417px; right:168px; z-index:3">
+                        <canvas id="canvas410" width="63" height="58" position="Center"></canvas>
+                    </div>
+                    <div id='Character410' style="position:absolute; top:425px; right:170px; z-index:3">
+                        <h4>410</h4>
+                    </div>
+                </div>
+
+                <!-- 409-->
+                <div>
+                    <div id='Blog409' style="position:absolute; top:405px; right:130px; z-index:3">
+                        <canvas id="canvas409" width="63" height="70" position="Center"></canvas>
+                    </div>
+                    <div id='Character409' style="position:absolute; top:412px; right:133px; z-index:3">
+                        <h4>409</h4>
+                    </div>
+                </div>
+
+                <!-- 403 -->
+                <div>
+                    <div id='Blog403' style="position:absolute; top:240px; right:64px; z-index:3">
+                        <canvas id="canvas403" width="82" height="56" position="Center"></canvas>
+                    </div>
+                    <div id='Character403' style="position:absolute; top:250px; right:73px; z-index:3">
+                        <h3>403</h3>
+                    </div>
+                </div>
+
+                <!-- 404 -->
+                <div>
+                    <div id='Blog404' style="position:absolute; top:269px; right:64px; z-index:3">
+                        <canvas id="canvas404" width="72" height="70" position="Center"></canvas>
+                    </div>
+                    <div id='Character404' style="position:absolute; top:280px; right:67px; z-index:3">
+                        <h3>404</h3>
+                    </div>
                 </div>
             </div>
 
-            <!-- 422 -->
-            <div>
-                <div id='Blog422' style="position:absolute; top:102px; right:202px; z-index:3">
-                    <canvas id="canvas422" width="97" height="98" position="Center"></canvas>
-                </div>
-                <div id='Character422' style="position:absolute; top:110px; right:208px; z-index:3">
-                    <h1>422</h1>
-                </div>
+            <div id='Character404' style="position:absolute; top:580px; right:245px; z-index:3">
+                <h1>4th Floor</h1>
             </div>
-
-            <!-- 415 -->
-            <div>
-                <div id='Blog415' style="position:absolute; top:239px; right:265px; z-index:3">
-                    <canvas id="canvas415" width="95" height="98" position="Center"></canvas>
-                </div>
-                <div id='Character415' style="position:absolute; top:245px; right:268px; z-index:3">
-                    <h1>415</h1>
-                </div>
-            </div>
-
-            <!-- LIL -->
-            <div>
-                <div id='BlogLIL' style="position:absolute; top:239px; right:334px; z-index:3">
-                    <canvas id="canvasLIL" width="99" height="98" position="Center"></canvas>
-                </div>
-                <div id='CharacterLIL' style="position:absolute; top:245px; right:345px; z-index:3">
-                    <h1>LIL</h1>
-                </div>
-            </div>
-
-            <!-- DentLab -->
-            <div>
-                <div id='BlogDent' style="position:absolute; top:307px; right:407px; z-index:3">
-                    <canvas id="canvasDent" width="96" height="77" position="Center"></canvas>
-                </div>
-                <div id='CharacterDent' style="position:absolute; top:313px; right:413px; z-index:3">
-                    <h2>Dent</h2>
-                </div>
-            </div>
-
-            <!-- 413 -->
-            <div>
-                <div id='Blog413' style="position:absolute; top:358px; right:407px; z-index:3">
-                    <canvas id="canvas413" width="96" height="111" position="Center"></canvas>
-                </div>
-                <div id='Character413' style="position:absolute; top:360px; right:410px; z-index:3">
-                    <h1>413</h1>
-                </div>
-            </div>
-
-            <!-- 412 -->
-            <div>
-                <div id='Blog412' style="position:absolute; top:443px; right:322px; z-index:3">
-                    <canvas id="canvas412" width="80" height="101" position="Center"></canvas>
-                </div>
-                <div id='Character412' style="position:absolute; top:450px; right:326px; z-index:3">
-                    <h2>412</h2>
-                </div>
-            </div>
-
-            <!-- LAB -->
-            <div>
-                <div id='BlogLAB' style="position:absolute; top:443px; right:261px; z-index:3">
-                    <canvas id="canvasLAB" width="88" height="101" position="Center"></canvas>
-                </div>
-                <div id='CharacterLAB' style="position:absolute; top:450px; right:266px; z-index:3">
-                    <h2>LAB</h2>
-                </div>
-            </div>
-
-            <!-- 411-->
-            <div>
-                <div id='Blog411' style="position:absolute; top:443px; right:200px; z-index:3">
-                    <canvas id="canvas411" width="88" height="101" position="Center"></canvas>
-                </div>
-                <div id='Character411' style="position:absolute; top:450px; right:205px; z-index:3">
-                    <h2>411</h2>
-                </div>
-            </div>
-
-            <!-- 414-->
-            <div>
-                <div id='Blog414' style="position:absolute; top:343px; right:334px; z-index:3">
-                    <canvas id="canvas414" width="65" height="95" position="Center"></canvas>
-                </div>
-                <div id='Character414' style="position:absolute; top:355px; right:335px; z-index:3">
-                    <h3>414</h3>
-                </div>
-            </div>
-
-            <!-- 410-->
-            <div>
-                <div id='Blog410' style="position:absolute; top:417px; right:168px; z-index:3">
-                    <canvas id="canvas410" width="63" height="58" position="Center"></canvas>
-                </div>
-                <div id='Character410' style="position:absolute; top:425px; right:170px; z-index:3">
-                    <h4>410</h4>
-                </div>
-            </div>
-
-            <!-- 409-->
-            <div>
-                <div id='Blog409' style="position:absolute; top:405px; right:130px; z-index:3">
-                    <canvas id="canvas409" width="63" height="70" position="Center"></canvas>
-                </div>
-                <div id='Character409' style="position:absolute; top:412px; right:133px; z-index:3">
-                    <h4>409</h4>
-                </div>
-            </div>
-            
-            <!-- 403 -->
-            <div>
-                <div id='Blog403' style="position:absolute; top:240px; right:64px; z-index:3">
-                    <canvas id="canvas403" width="82" height="56" position="Center"></canvas>
-                </div>
-                <div id='Character403' style="position:absolute; top:250px; right:73px; z-index:3">
-                    <h3>403</h3>
-                </div>
-            </div>
-
-            <!-- 404 -->
-            <div>
-                <div id='Blog404' style="position:absolute; top:269px; right:64px; z-index:3">
-                    <canvas id="canvas404" width="72" height="70" position="Center"></canvas>
-                </div>
-                <div id='Character404' style="position:absolute; top:280px; right:67px; z-index:3">
-                    <h3>404</h3>
-                </div>
-            </div>
-
-
-            <div id='Character404' style="position:absolute; top:580px; right:250px; z-index:3">
-                <h1 >4th Floor</h1>
-                </div>
-            
 
             <br>
-            <br>
+
+            <p>Date: <span id="datetime"></span></p>
+            <script>
+                var dt = new Date();
+                document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+            </script>
+
+
             <!-- Slider -->
             <div>
                 <div id="time-range">
@@ -441,7 +559,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 
-
+            <!-- Farm -->
             <script>
                 // FARM SCRIPT######################################
                 $("#slider-range").slider({
@@ -504,6 +622,9 @@
 
                         $('.slider-time2').html(hours2 + ':' + minutes2);
 
+
+
+
                         // 402
                         var c = $('#canvas402');
                         var context = c[0].getContext('2d');
@@ -521,14 +642,14 @@
                         // 401 
                         var c = $('#canvas401');
                         var context = c[0].getContext('2d');
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 200, 100);
+                        context.fillStyle = "#FFA500";
+                        context.fillRect(30, 30, 200, 100);
 
                         // 422 
                         var c = $('#canvas422');
                         var context = c[0].getContext('2d');
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 200, 100);
+                        context.fillStyle = "#800000";
+                        context.fillRect(30, 30, 200, 100);
 
                         // 415 
                         var c = $('#canvas415');
@@ -547,28 +668,20 @@
                         // LIL 
                         var c = $('#canvasLIL');
                         var context = c[0].getContext('2d');
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 200, 100);
+                        context.fillStyle = "#800080";
+                        context.fillRect(30, 30, 200, 100);
 
                         // Dent 
                         var c = $('#canvasDent');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 200, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 200, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 200, 100);
-                        }
+                        context.fillStyle = "#800080";
+                        context.fillRect(30, 30, 200, 100);
 
                         // 413
                         var c = $('#canvas413');
                         var context = c[0].getContext('2d');
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 200, 100);
+                        context.fillStyle = "#0000FF";
+                        context.fillRect(30, 30, 200, 100);
 
                         // 412
                         var c = $('#canvas412');
@@ -587,64 +700,34 @@
                         // LAB
                         var c = $('#canvasLAB');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 200, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 200, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 200, 100);
-                        }
+                        context.fillStyle = "#800080";
+                        context.fillRect(30, 30, 200, 100);
 
                         // 411
                         var c = $('#canvas411');
                         var context = c[0].getContext('2d');
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 200, 100);
+                        context.fillStyle = "#0000FF";
+                        context.fillRect(30, 30, 200, 100);
 
                         // 414
                         var c = $('#canvas414');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 200, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 200, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 200, 100);
-                        }
+                        context.fillStyle = "#0000FF";
+                        context.fillRect(30, 30, 200, 100);
 
                         // 410
                         var c = $('#canvas410');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 200, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 200, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 200, 100);
-                        }
+                        context.fillStyle = "#0000FF";
+                        context.fillRect(30, 30, 200, 100);
+
 
                         // 409
                         var c = $('#canvas409');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 200, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 200, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 200, 100);
-                        }
+                        context.fillStyle = "#0000FF";
+                        context.fillRect(30, 30, 200, 100);
+
 
                         // 403
                         var c = $('#canvas403');
@@ -677,6 +760,7 @@
                     }
                 });
             </script>
+
 
         </div>
 
