@@ -275,7 +275,7 @@
 
 <body>
     <div class="flex-center position-ref full-height">
-
+             
         <div class="top-left">
 
 
@@ -284,7 +284,7 @@
                 Room Monitoring System
             </div>
             <div><img src="{{url('images/4floor.jpg ')}} "></div>
-            <div></div>
+            
 
             <!-- Color Room Blog -->
             <div>

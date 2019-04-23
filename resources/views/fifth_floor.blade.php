@@ -333,20 +333,12 @@
                     <div id='BlogShop' style="position:absolute; top:300px; right:-100px; z-index:3">
                         <canvas id="canvasShop" width="75" height="75" position="Center"></canvas>
                     </div>
-                    <div id='CharacterShop' style="position:absolute; top:320px; right:-255px; z-index:3">
-                        <h3>ร้านค้านักศึกษา</h3>
+                    <div id='CharacterShop' style="position:absolute; top:320px; right:-235px; z-index:3">
+                        <h3>ห้องพนักงาน</h3>
                     </div>
                 </div>
 
-                <!-- Student Room -->
-                <div>
-                    <div id='BlogStudent' style="position:absolute; top:350px; right:-100px; z-index:3">
-                        <canvas id="canvasStudent" width="75" height="75" position="Center"></canvas>
-                    </div>
-                    <div id='CharacterStudent' style="position:absolute; top:370px; right:-235px; z-index:3">
-                        <h3>ห้องนักศึกษา</h3>
-                    </div>
-                </div>
+                
             </div>
 
             <!-- Button -->
@@ -388,19 +380,14 @@
                 ctx.fillStyle = "#99ff99";
                 ctx.fill();
 
-                // Shop
+                // Staff
                 var c = document.getElementById("canvasShop");
                 var ctx = c.getContext("2d");
                 ctx.rect(30, 30, 200, 200);
                 ctx.fillStyle = "#800000";
                 ctx.fill();
 
-                // Student Room
-                var c = document.getElementById("canvasStudent");
-                var ctx = c.getContext("2d");
-                ctx.rect(30, 30, 200, 200);
-                ctx.fillStyle = "#FFA500";
-                ctx.fill();
+
             </script>
 
             <!-- Room -->
@@ -495,8 +482,145 @@
                     </div>
                 </div>      
                
+                <!-- 515 -->
+                <div>
+                    <div id='Blog515' style="position:absolute; top:427px; right:212px; z-index:3" class="container">
+                        <canvas id="canvas515" width="66" height="61" ></canvas>
+                    </div>
+                    <div id='Character515' style="position:absolute; top:438px; right:216px; z-index:3">
+                        <h4>515</h4>
+                    </div>
+                </div>  
  
+                <!-- 514 -->
+                <div>
+                    <div id='Blog514' style="position:absolute; top:415px; right:173px; z-index:3" class="container">
+                        <canvas id="canvas514" width="65" height="73" ></canvas>
+                    </div>
+                    <div id='Character514' style="position:absolute; top:430px; right:177px; z-index:3">
+                        <h4>514</h4>
+                    </div>
+                </div>  
                 
+                <!-- 512 -->
+                <div>
+                    <div id='Blog512' style="position:absolute; top:366px; right:173px; z-index:3" class="container">
+                        <canvas id="canvas512" width="80" height="45" ></canvas>
+                    </div>
+                    <div id='Character512' style="position:absolute; top:372px; right:183px; z-index:3">
+                        <h4>512</h4>
+                    </div>
+                </div>
+
+                <!-- 511 -->
+                <div>
+                    <div id='Blog511' style="position:absolute; top:348px; right:173px; z-index:3" class="container">
+                        <canvas id="canvas511" width="80" height="45" ></canvas>
+                    </div>
+                    <div id='Character511' style="position:absolute; top:354px; right:183px; z-index:3">
+                        <h4>511</h4>
+                    </div>
+                </div>
+
+                <!-- 510 -->
+                <div>
+                    <div id='Blog510' style="position:absolute; top:313px; right:173px; z-index:3" class="container">
+                        <canvas id="canvas510" width="65" height="62" ></canvas>
+                    </div>
+                    <div id='Character510' style="position:absolute; top:328px; right:176px; z-index:3">
+                        <h4>510</h4>
+                    </div>
+                </div>
+
+                <!-- 506 -->
+                <div>
+                    <div id='Blog506' style="position:absolute; top:289px; right:180px; z-index:3" class="container">
+                        <canvas id="canvas506" width="60" height="51" ></canvas>
+                    </div>
+                    <div id='Character506' style="position:absolute; top:298px; right:180px; z-index:3">
+                        <h4>506</h4>
+                    </div>
+                </div>
+
+                <!-- 505 -->
+                <div>
+                    <div id='Blog505' style="position:absolute; top:289px; right:142px; z-index:3" class="container">
+                        <canvas id="canvas505" width="65" height="57" ></canvas>
+                    </div>
+                    <div id='Character505' style="position:absolute; top:298px; right:145px; z-index:3">
+                        <h4>505</h4>
+                    </div>
+                </div>
+
+                <!-- 504 -->
+                <div>
+                    <div id='Blog504' style="position:absolute; top:289px; right:104px; z-index:3" class="container">
+                        <canvas id="canvas504" width="65" height="57" ></canvas>
+                    </div>
+                    <div id='Character504' style="position:absolute; top:298px; right:107px; z-index:3">
+                        <h4>504</h4>
+                    </div>
+                </div>
+
+                <!-- 503 -->
+                <div>
+                    <div id='Blog503' style="position:absolute; top:245px; right:104px; z-index:3" class="container">
+                        <canvas id="canvas503" width="74" height="58" ></canvas>
+                    </div>
+                    <div id='Character503' style="position:absolute; top:257px; right:110px; z-index:3">
+                        <h4>503</h4>
+                    </div>
+                </div>
+
+                <!-- 507 -->
+                <div>
+                    <div id='Blog507' style="position:absolute; top:245px; right:150px; z-index:3" class="container">
+                        <canvas id="canvas507" width="90" height="58" ></canvas>
+                    </div>
+                    <div id='Character507' style="position:absolute; top:257px; right:165px; z-index:3">
+                        <h4>507</h4>
+                    </div>
+                </div>
+
+                 <!-- 509 -->
+                 <div>
+                    <div id='Blog509' style="position:absolute; top:244px; right:226px; z-index:3" class="container">
+                        <canvas id="canvas509" width="65" height="65" ></canvas>
+                    </div>
+                    <div id='Character509' style="position:absolute; top:260px; right:229px; z-index:3">
+                        <h4>509</h4>
+                    </div>
+                </div>
+
+                 <!-- 508 -->
+                 <div>
+                    <div id='Blog508' style="position:absolute; top:282px; right:226px; z-index:3" class="container">
+                        <canvas id="canvas508" width="65" height="65" ></canvas>
+                    </div>
+                    <div id='Character508' style="position:absolute; top:295px; right:229px; z-index:3">
+                        <h4>508</h4>
+                    </div>
+                </div>
+
+                 <!-- 520 -->
+                 <div>
+                    <div id='Blog520' style="position:absolute; top:353px; right:386px; z-index:3" class="container">
+                        <canvas id="canvas520" width="65" height="60" ></canvas>
+                    </div>
+                    <div id='Character520' style="position:absolute; top:365px; right:390px; z-index:3">
+                        <h4>520</h4>
+                    </div>
+                </div>
+
+                <!-- 519 -->
+                <div>
+                    <div id='Blog519' style="position:absolute; top:387px; right:386px; z-index:3" class="container">
+                        <canvas id="canvas519" width="65" height="63" ></canvas>
+                    </div>
+                    <div id='Character519' style="position:absolute; top:400px; right:390px; z-index:3">
+                        <h4>519</h4>
+                    </div>
+                </div>
 
             </div>
             
@@ -607,8 +731,8 @@
                             context.fillRect(30, 30, 300, 100);
                         }
 
-                                                // 501
-                                                var c = $('#canvas501');
+                        // 501
+                        var c = $('#canvas501');
                         var context = c[0].getContext('2d');
                         if (ui.values[0] >= 480 && ui.values[0] <= 570) {
                             context.fillStyle = "#99ff99";
@@ -625,45 +749,22 @@
                         // 529
                         var c = $('#canvas529');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
+                            context.fillStyle = "#800000";
                             context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }                     
+                                          
 
                         
                         // 528
                         var c = $('#canvas528');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
+                            context.fillStyle = "#800000";
                             context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
 
                         // 530
                         var c = $('#canvas530');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
+                            context.fillStyle = "#800000";
                             context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
 
                         // 521
                         var c = $('#canvas521');
@@ -696,16 +797,9 @@
                         // 517
                         var c = $('#canvas517');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
+                            context.fillStyle = "#800080";
                             context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
+                        
 
                         // 516
                         var c = $('#canvas516');
@@ -721,215 +815,118 @@
                             context.fillRect(30, 30, 300, 100);
                         }
 
-                        // 520
-                        var c = $('#canvas520');
-                        var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
-
-                        // 519
-                        var c = $('#canvas519');
-                        var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
 
                         // 515
                         var c = $('#canvas515');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
+                            context.fillStyle = "#0000FF";
                             context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
+                        
 
                         // 514
                         var c = $('#canvas514');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
+                            context.fillStyle = "#0000FF";
                             context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
+                        
 
-                        // 513
-                        var c = $('#canvas513');
-                        var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
+                        // // 512
+                        // var c = $('#canvas512');
+                        // var context = c[0].getContext('2d');
+                        // if (ui.values[0] >= 480 && ui.values[0] <= 570) {
+                        //     context.fillStyle = "#99ff99";
+                        //     context.fillRect(30, 30, 300, 100);
+                        // } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
+                        //     context.fillStyle = "#99ff99";
+                        //     context.fillRect(30, 30, 300, 100);
+                        // } else {
+                        //     context.fillStyle = "#ff0000";
+                        //     context.fillRect(30, 30, 300, 100);
+                        // }
 
-                        // 512
-                        var c = $('#canvas512');
-                        var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
 
-                        // 511
-                        var c = $('#canvas511');
-                        var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
+                        // // 511
+                        // var c = $('#canvas511');
+                        // var context = c[0].getContext('2d');
+                        // if (ui.values[0] >= 480 && ui.values[0] <= 570) {
+                        //     context.fillStyle = "#99ff99";
+                        //     context.fillRect(30, 30, 300, 100);
+                        // } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
+                        //     context.fillStyle = "#99ff99";
+                        //     context.fillRect(30, 30, 300, 100);
+                        // } else {
+                        //     context.fillStyle = "#ff0000";
+                        //     context.fillRect(30, 30, 300, 100);
+                        // }
 
                         // 510
                         var c = $('#canvas510');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
+  
+                            context.fillStyle = "#0000FF";
                             context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
+                        
+
 
                         // 506
                         var c = $('#canvas506');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
+                        
+                            context.fillStyle = "#0000FF";
                             context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
+                        
+
 
                         // 505
                         var c = $('#canvas505');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
+                            context.fillStyle = "#0000FF";
                             context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
+                        
 
                         // 504
                         var c = $('#canvas504');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
+                            context.fillStyle = "#0000FF";
                             context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
-
-                        // 508
-                        var c = $('#canvas508');
+                        
+                        // 503
+                        var c = $('#canvas503');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
+                            context.fillStyle = "#0000FF";
                             context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
 
-                        // 509
-                        var c = $('#canvas509');
-                        var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
 
                         // 507
                         var c = $('#canvas507');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
+                            context.fillStyle = "#0000FF";
                             context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 300, 100);
-                        }
 
-                        // 503
-                        var c = $('#canvas503');
+                        // 509
+                        var c = $('#canvas509');
                         var context = c[0].getContext('2d');
-                        if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                            context.fillStyle = "#99ff99";
+                            context.fillStyle = "#0000FF";
                             context.fillRect(30, 30, 300, 100);
-                        } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                            context.fillStyle = "#99ff99";
+
+                        // 508
+                        var c = $('#canvas508');
+                        var context = c[0].getContext('2d');
+                            context.fillStyle = "#0000FF";
                             context.fillRect(30, 30, 300, 100);
-                        } else {
-                            context.fillStyle = "#ff0000";
+
+                        // 520
+                        var c = $('#canvas520');
+                        var context = c[0].getContext('2d');
+                            context.fillStyle = "#0000FF";
                             context.fillRect(30, 30, 300, 100);
-                        }                                                                                                                                                
+
+                        // 519
+                        var c = $('#canvas519');
+                        var context = c[0].getContext('2d');
+                            context.fillStyle = "#0000FF";
+                            context.fillRect(30, 30, 300, 100);
+                        
                     }
                 });
             </script>
