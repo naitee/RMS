@@ -352,8 +352,8 @@
             <!-- Button -->
             <div>
             <div id='BlogButton' style="position:absolute; top:450px; right:-185px; z-index:3">
-                        <div><a href="#" class="button">4th Floor</a></div>
-                        <div><a href="#" class="button">5th Floor</a></div>
+                        <div><a href="/" class="button">4th Floor</a></div>
+                        <div><a href="/fifth_floor" class="button">5th Floor</a></div>
             </div>
 
             
@@ -407,156 +407,156 @@
             <div>
                 <!-- 402 -->
                 <div>
-                    <div id='Blog402' style="position:absolute; top:103px; right:64px; z-index:3">
+                    <div id='Blog402' style="position:absolute; top:122px; right:91px; z-index:3">
                         <canvas id="canvas402" width="96" height="220" position="Center"></canvas>
                     </div>
-                    <div id='Character402' style="position:absolute; top:110px; right:70px; z-index:3">
+                    <div id='Character402' style="position:absolute; top:130px; right:95px; z-index:3">
                         <h1>402</h1>
                     </div>
                 </div>
 
                 <!-- 401 -->
                 <div>
-                    <div id='Blog401' style="position:absolute; top:103px; right:133px; z-index:3">
+                    <div id='Blog401' style="position:absolute; top:122px; right:160px; z-index:3">
                         <canvas id="canvas401" width="95" height="220" position="Center"></canvas>
                     </div>
-                    <div id='Character402' style="position:absolute; top:110px; right:139px; z-index:3">
+                    <div id='Character402' style="position:absolute; top:130px; right:165px; z-index:3">
                         <h1>401</h1>
                     </div>
                 </div>
 
                 <!-- 422 -->
                 <div>
-                    <div id='Blog422' style="position:absolute; top:102px; right:202px; z-index:3">
-                        <canvas id="canvas422" width="97" height="98" position="Center"></canvas>
+                    <div id='Blog422' style="position:absolute; top:120px; right:229px; z-index:3">
+                        <canvas id="canvas422" width="97" height="99" position="Center"></canvas>
                     </div>
-                    <div id='Character422' style="position:absolute; top:110px; right:208px; z-index:3">
+                    <div id='Character422' style="position:absolute; top:130px; right:234px; z-index:3">
                         <h1>422</h1>
                     </div>
                 </div>
 
                 <!-- 415 -->
                 <div>
-                    <div id='Blog415' style="position:absolute; top:239px; right:265px; z-index:3">
+                    <div id='Blog415' style="position:absolute; top:258px; right:294px; z-index:3">
                         <canvas id="canvas415" width="95" height="98" position="Center"></canvas>
                     </div>
-                    <div id='Character415' style="position:absolute; top:245px; right:268px; z-index:3">
+                    <div id='Character415' style="position:absolute; top:267px; right:297px; z-index:3">
                         <h1>415</h1>
                     </div>
                 </div>
 
                 <!-- LIL -->
                 <div>
-                    <div id='BlogLIL' style="position:absolute; top:239px; right:334px; z-index:3">
+                    <div id='BlogLIL' style="position:absolute; top:258px; right:362px; z-index:3">
                         <canvas id="canvasLIL" width="99" height="98" position="Center"></canvas>
                     </div>
-                    <div id='CharacterLIL' style="position:absolute; top:245px; right:345px; z-index:3">
+                    <div id='CharacterLIL' style="position:absolute; top:265px; right:375px; z-index:3">
                         <h1>LIL</h1>
                     </div>
                 </div>
 
                 <!-- DentLab -->
                 <div>
-                    <div id='BlogDent' style="position:absolute; top:307px; right:407px; z-index:3">
-                        <canvas id="canvasDent" width="96" height="77" position="Center"></canvas>
+                    <div id='BlogDent' style="position:absolute; top:326px; right:435px; z-index:3">
+                        <canvas id="canvasDent" width="98" height="78" position="Center"></canvas>
                     </div>
-                    <div id='CharacterDent' style="position:absolute; top:313px; right:413px; z-index:3">
+                    <div id='CharacterDent' style="position:absolute; top:335px; right:440px; z-index:3">
                         <h2>Dent</h2>
                     </div>
                 </div>
 
                 <!-- 413 -->
                 <div>
-                    <div id='Blog413' style="position:absolute; top:358px; right:407px; z-index:3">
-                        <canvas id="canvas413" width="96" height="111" position="Center"></canvas>
+                    <div id='Blog413' style="position:absolute; top:377px; right:435px; z-index:3">
+                        <canvas id="canvas413" width="97" height="112" position="Center"></canvas>
                     </div>
-                    <div id='Character413' style="position:absolute; top:360px; right:410px; z-index:3">
+                    <div id='Character413' style="position:absolute; top:385px; right:440px; z-index:3">
                         <h1>413</h1>
                     </div>
                 </div>
 
                 <!-- 412 -->
                 <div>
-                    <div id='Blog412' style="position:absolute; top:443px; right:322px; z-index:3">
-                        <canvas id="canvas412" width="80" height="101" position="Center"></canvas>
+                    <div id='Blog412' style="position:absolute; top:462px; right:350px; z-index:3">
+                        <canvas id="canvas412" width="80" height="102" position="Center"></canvas>
                     </div>
-                    <div id='Character412' style="position:absolute; top:450px; right:326px; z-index:3">
+                    <div id='Character412' style="position:absolute; top:470px; right:353px; z-index:3">
                         <h2>412</h2>
                     </div>
                 </div>
 
                 <!-- LAB -->
                 <div>
-                    <div id='BlogLAB' style="position:absolute; top:443px; right:261px; z-index:3">
-                        <canvas id="canvasLAB" width="88" height="101" position="Center"></canvas>
+                    <div id='BlogLAB' style="position:absolute; top:462px; right:288px; z-index:3">
+                        <canvas id="canvasLAB" width="89" height="102" position="Center"></canvas>
                     </div>
-                    <div id='CharacterLAB' style="position:absolute; top:450px; right:266px; z-index:3">
+                    <div id='CharacterLAB' style="position:absolute; top:470px; right:295px; z-index:3">
                         <h2>LAB</h2>
                     </div>
                 </div>
 
                 <!-- 411-->
                 <div>
-                    <div id='Blog411' style="position:absolute; top:443px; right:200px; z-index:3">
-                        <canvas id="canvas411" width="88" height="101" position="Center"></canvas>
+                    <div id='Blog411' style="position:absolute; top:462px; right:226px; z-index:3">
+                        <canvas id="canvas411" width="89" height="102" position="Center"></canvas>
                     </div>
-                    <div id='Character411' style="position:absolute; top:450px; right:205px; z-index:3">
+                    <div id='Character411' style="position:absolute; top:470px; right:233px; z-index:3">
                         <h2>411</h2>
                     </div>
                 </div>
 
                 <!-- 414-->
                 <div>
-                    <div id='Blog414' style="position:absolute; top:343px; right:334px; z-index:3">
+                    <div id='Blog414' style="position:absolute; top:363px; right:362px; z-index:3">
                         <canvas id="canvas414" width="65" height="95" position="Center"></canvas>
                     </div>
-                    <div id='Character414' style="position:absolute; top:355px; right:335px; z-index:3">
+                    <div id='Character414' style="position:absolute; top:373px; right:362px; z-index:3">
                         <h3>414</h3>
                     </div>
                 </div>
 
                 <!-- 410-->
                 <div>
-                    <div id='Blog410' style="position:absolute; top:417px; right:168px; z-index:3">
-                        <canvas id="canvas410" width="63" height="58" position="Center"></canvas>
+                    <div id='Blog410' style="position:absolute; top:437px; right:194px; z-index:3">
+                        <canvas id="canvas410" width="64" height="58" position="Center"></canvas>
                     </div>
-                    <div id='Character410' style="position:absolute; top:425px; right:170px; z-index:3">
+                    <div id='Character410' style="position:absolute; top:445px; right:197px; z-index:3">
                         <h4>410</h4>
                     </div>
                 </div>
 
                 <!-- 409-->
                 <div>
-                    <div id='Blog409' style="position:absolute; top:405px; right:130px; z-index:3">
-                        <canvas id="canvas409" width="63" height="70" position="Center"></canvas>
+                    <div id='Blog409' style="position:absolute; top:424px; right:157px; z-index:3">
+                        <canvas id="canvas409" width="64" height="71" position="Center"></canvas>
                     </div>
-                    <div id='Character409' style="position:absolute; top:412px; right:133px; z-index:3">
+                    <div id='Character409' style="position:absolute; top:432px; right:160px; z-index:3">
                         <h4>409</h4>
                     </div>
                 </div>
 
                 <!-- 403 -->
                 <div>
-                    <div id='Blog403' style="position:absolute; top:240px; right:64px; z-index:3">
+                    <div id='Blog403' style="position:absolute; top:259px; right:90px; z-index:3">
                         <canvas id="canvas403" width="82" height="56" position="Center"></canvas>
                     </div>
-                    <div id='Character403' style="position:absolute; top:250px; right:73px; z-index:3">
+                    <div id='Character403' style="position:absolute; top:268px; right:98px; z-index:3">
                         <h3>403</h3>
                     </div>
                 </div>
 
                 <!-- 404 -->
                 <div>
-                    <div id='Blog404' style="position:absolute; top:269px; right:64px; z-index:3">
+                    <div id='Blog404' style="position:absolute; top:288px; right:90px; z-index:3">
                         <canvas id="canvas404" width="72" height="70" position="Center"></canvas>
                     </div>
-                    <div id='Character404' style="position:absolute; top:280px; right:67px; z-index:3">
+                    <div id='Character404' style="position:absolute; top:297px; right:95px; z-index:3">
                         <h3>404</h3>
                     </div>
                 </div>
             </div>
 
-            <div id='4th_floor' style="position:absolute; top:580px; right:245px; z-index:3">
+            <div id='4floor' style="position:absolute; top:580px; right:245px; z-index:3">
                 <h1>4th Floor</h1>
             </div>
 

@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('fouth_floor');
 });
+
+Route::resource('/fifth_floor', 'fifth_floorController');
