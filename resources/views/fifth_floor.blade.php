@@ -638,82 +638,30 @@
             </div>
  
             <br>
-            
-
-            <!-- Date -->
-            <div>
-                <table style="width:63%">
-                    <th><p>Date: <select id="day"></select></p></th>
-                    <th><p>- Month: <select id="month"></select></p></th>
-                    <th><p>- Year: <select id="year"></select></p></th>
-            </div>
+            <br>
  
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-                
+            Date :<span id="today"></span>
                 <script>
-                    $(document).ready(function() {
-                        const monthNames = ["January", "February", "March", "April", "May", "June",
-                            "July", "August", "September", "October", "November", "December"
-                        ];
-                        var qntYears = 4;
-                        var selectYear = $("#year");
-                        var selectMonth = $("#month");
-                        var selectDay = $("#day");
-                        var currentYear = new Date().getFullYear();
+                    var today = new Date();
+                    var dd = today.getDate();
+                    var mm = today.getMonth() + 1;
+                    var yyyy = today.getFullYear();
+                    if (dd < 10) {
+                        dd = '0' + dd;
+                    }
 
-                        for (var y = 0; y < qntYears; y++) {
-                            let date = new Date(currentYear);
-                            var yearElem = document.createElement("option");
-                            yearElem.value = currentYear
-                            yearElem.textContent = currentYear;
-                            selectYear.append(yearElem);
-                            currentYear--;
-                        }
-
-                        for (var m = 0; m < 12; m++) {
-                            let monthNum = new Date(2018, m).getMonth()
-                            let month = monthNames[monthNum];
-                            var monthElem = document.createElement("option");
-                            monthElem.value = monthNum;
-                            monthElem.textContent = month;
-                            selectMonth.append(monthElem);
-                        }
-
-                        var d = new Date();
-                        var month = d.getMonth();
-                        var year = d.getFullYear();
-                        var day = d.getDate();
-
-                        selectYear.val(year);
-                        selectYear.on("change", AdjustDays);
-                        selectMonth.val(month);
-                        selectMonth.on("change", AdjustDays);
-
-                        AdjustDays();
-                        selectDay.val(day)
-
-                        function AdjustDays() {
-                            var year = selectYear.val();
-                            var month = parseInt(selectMonth.val()) + 1;
-                            selectDay.empty();
-
-                            //get the last day, so the number of days in that month
-                            var days = new Date(year, month, 0).getDate();
-
-                            //lets create the days of that month
-                            for (var d = 1; d <= days; d++) {
-                                var dayElem = document.createElement("option");
-                                dayElem.value = d;
-                                dayElem.textContent = d;
-                                selectDay.append(dayElem);
-                            }
-                        }
-                    });
+                    if (mm < 10) {
+                        mm = '0' + mm;
+                    }
+                    current = ' ' + mm + '-' + dd + '-' + yyyy;
+                    document.getElementById("today").innerHTML = current
                 </script>
- 
-            <div style="position:absolute; top:650px; right:450px; z-index:3">
-            <p>Time : <span class="slider-time">9:00 AM</span></p>
-            </div>
+
+
+
+                <div style="position:absolute; top:650px; right:460px; z-index:3">
+                    <p>Time : <span class="slider-time">9:00AM</span></p>
+                </div>
            
             <!-- Slider -->
             <div>
