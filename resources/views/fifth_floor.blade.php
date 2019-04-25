@@ -190,7 +190,7 @@
  
     html,
     body {
-        background-color: #ffb6c1;
+        background-color:powderblue;
         color: #FFFFFF;
         font-family: 'Nunito', sans-serif;
         font-weight: 200;
@@ -270,6 +270,10 @@
         margin: 4px 2px;
         cursor: pointer;
     }
+    
+    img { 
+        border:4px solid #021a40;
+    }
 </style>
  
 <head>
@@ -290,7 +294,7 @@
  
  
             <div class="title m-b-md links">
-                Room Monitoring System
+            <strong><font color="#636b6f">Room Monitoring System</font></strong>
             </div>
             <div><img src="{{url('images/5floor.jpg ')}} "></div>
             <div></div>
@@ -303,7 +307,7 @@
                         <canvas id="canvasAJ" width="75" height="75" position="Center"></canvas>
                     </div>
                     <div id='CharacterAJ' class="h3" style="position:absolute; top:120px; right:-240px; z-index:3">
-                        <h3>ห้องพักอาจารย์</h3>
+                    <font color="#636b6f"><h3>ห้องพักอาจารย์</h3></font>
                     </div>
                 </div>
  
@@ -313,7 +317,7 @@
                         <canvas id="canvasLABdemo" width="75" height="75" position="Center"></canvas>
                     </div>
                     <div id='CharacterLABdemo' class="h3" style="position:absolute; top:170px; right:-195px; z-index:3">
-                        <h3>ห้องแลป</h3>
+                    <font color="#636b6f"><h3>ห้องแลป</h3></font>
                     </div>
                 </div>
  
@@ -323,7 +327,7 @@
                         <canvas id="canvasBusy" width="75" height="75" position="Center"></canvas>
                     </div>
                     <div id='CharacterBusy' class="h3" style="position:absolute; top:220px; right:-180px; z-index:3">
-                        <h3>ไม่ว่าง</h3>
+                    <font color="#636b6f"><h3>ไม่ว่าง</h3></font>
                     </div>
                 </div>
  
@@ -333,7 +337,7 @@
                         <canvas id="canvasAvai" width="75" height="75" position="Center"></canvas>
                     </div>
                     <div id='CharacterBusy' class="h3" style="position:absolute; top:270px; right:-165px; z-index:3">
-                        <h3>ว่าง</h3>
+                    <font color="#636b6f"><h3>ว่าง</h3></font>
                     </div>
                 </div>
  
@@ -343,7 +347,7 @@
                         <canvas id="canvasShop" width="75" height="75" position="Center"></canvas>
                     </div>
                     <div id='CharacterShop' class="h3" style="position:absolute; top:320px; right:-230px; z-index:3">
-                        <h3>ห้องพนักงาน</h3>
+                    <font color="#636b6f"><h3>ห้องพนักงาน</h3></font>
                     </div>
                 </div>
  
@@ -633,14 +637,14 @@
  
             </div>
            
-            <div id='5th_floor' class= "h1" style="position:absolute; top:580px; right:245px; z-index:3">
-                <h1>5th Floor</h1>
+            <div id='5th_floor' class= "h1" style="position:absolute; top:580px; right:255px; z-index:3">
+            <font color="#636b6f"><h1>5th Floor</h1></font>
             </div>
  
             <br>
             <br>
  
-            Date :<span id="today"></span>
+            <strong><font color="#636b6f">Date :<span id="today"></span></font></strong>
                 <script>
                     var today = new Date();
                     var dd = today.getDate();
@@ -659,8 +663,8 @@
 
 
 
-                <div style="position:absolute; top:650px; right:460px; z-index:3">
-                    <p>Time : <span class="slider-time">9:00AM</span></p>
+                <div style="position:absolute; top:660px; right:460px; z-index:3">
+                <strong><font color="#636b6f"><p>Time : <span class="slider-time">9:00AM</span></p></font></strong>
                 </div>
            
             <!-- Slider -->
