@@ -363,7 +363,7 @@
             <!-- Button -->
             <div>
             <div id='BlogButton' style="position:absolute; top:450px; right:-185px; z-index:3">
-                        <div><a href="/" class="button">4th Floor</a></div>
+                        <div><a href="/fouth_floor" class="button">4th Floor</a></div>
                         <div><a href="/fifth_floor" class="button">5th Floor</a></div>
             </div>
  
