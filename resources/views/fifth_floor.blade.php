@@ -361,9 +361,7 @@
                         <div><a href="/fifth_floor" class="button">5th Floor</a></div>
             </div>
  
-           
-           
-                    <!-- Color Explain -->
+            <!-- Color Explain -->
             <script>
                 // AJ Room
                 var c = document.getElementById("canvasAJ");
@@ -407,7 +405,7 @@
             <div>
                 <!-- 502 -->
                 <div>
-                    <div id='Blog502' style="position:absolute; top:100px; right:104px; z-index:3">
+                    <div id='Blog502' style="position:absolute; top:104px; right:108px; z-index:3">
                         <canvas id="canvas502" width="99" height="300" position="Center"></canvas>
                     </div>
                     <div id='Character502' style="position:absolute; top:115px; right:110px; z-index:3">
@@ -417,7 +415,7 @@
  
                 <!-- 501 -->
                 <div>
-                    <div id='Blog501' style="position:absolute; top:100px; right:177px; z-index:3">
+                    <div id='Blog501' style="position:absolute; top:104px; right:181px; z-index:3">
                         <canvas id="canvas501" width="97" height="300" position="Center"></canvas>
                     </div>
                     <div id='Character501' style="position:absolute; top:115px; right:180px; z-index:3">
@@ -427,7 +425,7 @@
  
                 <!-- 529 -->
                 <div>
-                    <div id='Blog529' style="position:absolute; top:100px; right:248px; z-index:3">
+                    <div id='Blog529' style="position:absolute; top:104px; right:252px; z-index:3">
                         <canvas id="canvas529" width="62" height="103" position="Center"></canvas>
                     </div>
                     <div id='Character529' style="position:absolute; top:130px; right:250px; z-index:3">
@@ -437,7 +435,7 @@
  
                 <!-- 528 -->
                 <div>
-                    <div id='Blog528' style="position:absolute; top:100px; right:283px; z-index:3">
+                    <div id='Blog528' style="position:absolute; top:104px; right:287px; z-index:3">
                         <canvas id="canvas528" width="65" height="103" position="Center"></canvas>
                     </div>
                     <div id='Character528' style="position:absolute; top:130px; right:286px; z-index:3">
@@ -447,7 +445,7 @@
  
                 <!-- 530 -->
                 <div>
-                    <div id='Blog530' style="position:absolute; top:176px; right:292px; z-index:3">
+                    <div id='Blog530' style="position:absolute; top:180px; right:296px; z-index:3">
                         <canvas id="canvas530" width="56" height="53" position="Center"></canvas>
                     </div>
                     <div id='Character530' style="position:absolute; top:185px; right:293px; z-index:3">
@@ -457,7 +455,7 @@
  
                 <!-- 521 -->
                 <div>
-                    <div id='Blog521' style="position:absolute; top:243px; right:317px; z-index:3">
+                    <div id='Blog521' style="position:absolute; top:247px; right:324px; z-index:3">
                         <canvas id="canvas521" width="173" height="102" position="Center"></canvas>
                     </div>
                     <div id='Character521' style="position:absolute; top:265px; right:360px; z-index:3">
@@ -467,7 +465,7 @@
                
                 <!-- 518 -->
                 <div>
-                    <div id='Blog518' style="position:absolute; top:314px; right:456px; z-index:3" class="container">
+                    <div id='Blog518' style="position:absolute; top:318px; right:460px; z-index:3" class="container">
                         <canvas id="canvas518" width="106" height="300" ></canvas>
                     </div>
                     <div id='Character518' style="position:absolute; top:324px; right:466px; z-index:3">
@@ -477,7 +475,7 @@
  
                 <!-- 517 -->
                 <div>
-                    <div id='Blog517' style="position:absolute; top:455px; right:390px; z-index:3" class="container">
+                    <div id='Blog517' style="position:absolute; top:459px; right:394px; z-index:3" class="container">
                         <canvas id="canvas517" width="171" height="105" ></canvas>
                     </div>
                     <div id='Character517' style="position:absolute; top:475px; right:433px; z-index:3">
@@ -487,7 +485,7 @@
  
                 <!-- 516 -->
                 <div>
-                    <div id='Blog516' style="position:absolute; top:454px; right:244px; z-index:3" class="container">
+                    <div id='Blog516' style="position:absolute; top:458px; right:248px; z-index:3" class="container">
                         <canvas id="canvas516" width="173" height="106" ></canvas>
                     </div>
                     <div id='Character516' style="position:absolute; top:475px; right:285px; z-index:3">
@@ -497,7 +495,7 @@
                
                 <!-- 515 -->
                 <div>
-                    <div id='Blog515' style="position:absolute; top:427px; right:212px; z-index:3" class="container">
+                    <div id='Blog515' style="position:absolute; top:431px; right:216px; z-index:3" class="container">
                         <canvas id="canvas515" width="66" height="61" ></canvas>
                     </div>
                     <div id='Character515' style="position:absolute; top:438px; right:216px; z-index:3">
@@ -507,7 +505,7 @@
  
                 <!-- 514 -->
                 <div>
-                    <div id='Blog514' style="position:absolute; top:415px; right:173px; z-index:3" class="container">
+                    <div id='Blog514' style="position:absolute; top:419px; right:177px; z-index:3" class="container">
                         <canvas id="canvas514" width="65" height="73" ></canvas>
                     </div>
                     <div id='Character514' style="position:absolute; top:430px; right:177px; z-index:3">
@@ -517,7 +515,7 @@
                
                 <!-- 512 -->
                 <div>
-                    <div id='Blog512' style="position:absolute; top:366px; right:173px; z-index:3" class="container">
+                    <div id='Blog512' style="position:absolute; top:350px; right:174px; z-index:3" class="container">
                         <canvas id="canvas512" width="80" height="45" ></canvas>
                     </div>
                     <div id='Character512' style="position:absolute; top:372px; right:183px; z-index:3">
@@ -527,7 +525,7 @@
  
                 <!-- 511 -->
                 <div>
-                    <div id='Blog511' style="position:absolute; top:348px; right:173px; z-index:3" class="container">
+                    <div id='Blog511' style="position:absolute; top:337px; right:177px; z-index:3" class="container">
                         <canvas id="canvas511" width="80" height="45" ></canvas>
                     </div>
                     <div id='Character511' style="position:absolute; top:354px; right:183px; z-index:3">
@@ -537,7 +535,7 @@
  
                 <!-- 510 -->
                 <div>
-                    <div id='Blog510' style="position:absolute; top:313px; right:173px; z-index:3" class="container">
+                    <div id='Blog510' style="position:absolute; top:317px; right:177px; z-index:3" class="container">
                         <canvas id="canvas510" width="65" height="62" ></canvas>
                     </div>
                     <div id='Character510' style="position:absolute; top:328px; right:176px; z-index:3">
@@ -547,7 +545,7 @@
  
                 <!-- 506 -->
                 <div>
-                    <div id='Blog506' style="position:absolute; top:289px; right:180px; z-index:3" class="container">
+                    <div id='Blog506' style="position:absolute; top:293px; right:184px; z-index:3" class="container">
                         <canvas id="canvas506" width="60" height="51" ></canvas>
                     </div>
                     <div id='Character506' style="position:absolute; top:298px; right:180px; z-index:3">
@@ -557,7 +555,7 @@
  
                 <!-- 505 -->
                 <div>
-                    <div id='Blog505' style="position:absolute; top:289px; right:142px; z-index:3" class="container">
+                    <div id='Blog505' style="position:absolute; top:293px; right:146px; z-index:3" class="container">
                         <canvas id="canvas505" width="65" height="57" ></canvas>
                     </div>
                     <div id='Character505' style="position:absolute; top:298px; right:145px; z-index:3">
@@ -567,7 +565,7 @@
  
                 <!-- 504 -->
                 <div>
-                    <div id='Blog504' style="position:absolute; top:289px; right:104px; z-index:3" class="container">
+                    <div id='Blog504' style="position:absolute; top:293px; right:108px; z-index:3" class="container">
                         <canvas id="canvas504" width="65" height="57" ></canvas>
                     </div>
                     <div id='Character504' style="position:absolute; top:298px; right:107px; z-index:3">
@@ -577,7 +575,7 @@
  
                 <!-- 503 -->
                 <div>
-                    <div id='Blog503' style="position:absolute; top:245px; right:104px; z-index:3" class="container">
+                    <div id='Blog503' style="position:absolute; top:249px; right:108px; z-index:3" class="container">
                         <canvas id="canvas503" width="74" height="58" ></canvas>
                     </div>
                     <div id='Character503' style="position:absolute; top:257px; right:110px; z-index:3">
@@ -587,7 +585,7 @@
  
                 <!-- 507 -->
                 <div>
-                    <div id='Blog507' style="position:absolute; top:245px; right:150px; z-index:3" class="container">
+                    <div id='Blog507' style="position:absolute; top:249px; right:154px; z-index:3" class="container">
                         <canvas id="canvas507" width="90" height="58" ></canvas>
                     </div>
                     <div id='Character507' style="position:absolute; top:257px; right:165px; z-index:3">
@@ -597,7 +595,7 @@
  
                  <!-- 509 -->
                  <div>
-                    <div id='Blog509' style="position:absolute; top:244px; right:226px; z-index:3" class="container">
+                    <div id='Blog509' style="position:absolute; top:248px; right:230px; z-index:3" class="container">
                         <canvas id="canvas509" width="65" height="65" ></canvas>
                     </div>
                     <div id='Character509' style="position:absolute; top:260px; right:229px; z-index:3">
@@ -607,7 +605,7 @@
  
                  <!-- 508 -->
                  <div>
-                    <div id='Blog508' style="position:absolute; top:282px; right:226px; z-index:3" class="container">
+                    <div id='Blog508' style="position:absolute; top:286px; right:230px; z-index:3" class="container">
                         <canvas id="canvas508" width="65" height="65" ></canvas>
                     </div>
                     <div id='Character508' style="position:absolute; top:295px; right:229px; z-index:3">
@@ -617,7 +615,7 @@
  
                  <!-- 520 -->
                  <div>
-                    <div id='Blog520' style="position:absolute; top:353px; right:386px; z-index:3" class="container">
+                    <div id='Blog520' style="position:absolute; top:357px; right:390px; z-index:3" class="container">
                         <canvas id="canvas520" width="65" height="60" ></canvas>
                     </div>
                     <div id='Character520' style="position:absolute; top:365px; right:390px; z-index:3">
@@ -627,7 +625,7 @@
  
                 <!-- 519 -->
                 <div>
-                    <div id='Blog519' style="position:absolute; top:387px; right:386px; z-index:3" class="container">
+                    <div id='Blog519' style="position:absolute; top:391px; right:390px; z-index:3" class="container">
                         <canvas id="canvas519" width="65" height="63" ></canvas>
                     </div>
                     <div id='Character519' style="position:absolute; top:400px; right:390px; z-index:3">
