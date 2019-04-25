@@ -1,10 +1,11 @@
 <!doctype html>
-
+ 
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
+ 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+<link href="https://fonts.googleapis.com/css?family=Athiti|Pattaya" rel="stylesheet">
 <!-- Styles -->
 <style>
     /* FARM CODE TIME SLIDER */
@@ -13,7 +14,10 @@
         font-size: 14px;
         color: #FFFFFF;
     }
-
+    .h3{
+        font-family: 'Athiti', sans-serif ;
+    }
+ 
     .ui-slider-horizontal {
         height: 8px;
         background: #D7D7D7;
@@ -27,17 +31,17 @@
         -o-border-radius: 6px;
         border-radius: 6px;
     }
-
+ 
     .ui-slider {
         position: relative;
         text-align: left;
     }
-
+ 
     .ui-slider-horizontal .ui-slider-range {
         top: -1px;
         height: 100%;
     }
-
+ 
     .ui-slider .ui-slider-range {
         position: absolute;
         z-index: 1;
@@ -59,7 +63,7 @@
         background-image: -o-linear-gradient(top, #A0D4F5, #81B8F3);
         background-image: linear-gradient(top, #A0D4F5, #81B8F3);
     }
-
+ 
     .ui-slider .ui-slider-handle {
         border-radius: 50%;
         background: #F9FBFA;
@@ -80,7 +84,7 @@
         -o-transition: box-shadow .3s;
         transition: box-shadow .3s;
     }
-
+ 
     .ui-slider .ui-slider-handle {
         position: absolute;
         z-index: 2;
@@ -90,7 +94,7 @@
         border: none;
         cursor: pointer;
     }
-
+ 
     .ui-slider .ui-slider-handle:after {
         content: "";
         position: absolute;
@@ -106,30 +110,30 @@
         -moz-box-shadow: 0 1px 1px 1px rgba(22, 73, 163, 0.7) inset, 0 1px 0 0 white;
         box-shadow: 0 1px 1px 1px rgba(22, 73, 163, 0.7) inset, 0 1px 0 0 #FFF;
     }
-
+ 
     .ui-slider-horizontal .ui-slider-handle {
         top: -.5em;
         margin-left: -.6em;
     }
-
+ 
     .ui-slider a:focus {
         outline: none;
     }
-
+ 
     #slider-range {
         width: 90%;
         margin: 0 auto;
     }
-
+ 
     #time-range {
         width: 400px;
     }
-
+ 
     < !-- .slidecontainer {
         width: 100%;
         /* Width of the outside container */
     }
-
+ 
     /* The slider itself */
     .slider {
         -webkit-appearance: none;
@@ -149,13 +153,13 @@
         /* 0.2 seconds transition on hover */
         transition: opacity .2s;
     }
-
+ 
     /* Mouse-over effects */
     .slider:hover {
         opacity: 1;
         /* Fully shown on mouse-over */
     }
-
+ 
     /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
     .slider::-webkit-slider-thumb {
         -webkit-appearance: none;
@@ -170,7 +174,7 @@
         cursor: pointer;
         /* Cursor on hover */
     }
-
+ 
     .slider::-moz-range-thumb {
         width: 25px;
         /* Set a specific slider handle width */
@@ -181,54 +185,58 @@
         cursor: pointer;
         /* Cursor on hover */
     }
-
-
-
+ 
+ 
+ 
     html,
     body {
-        background-color: #000;
+        background-color: #ffc0cb;
         color: #FFFFFF;
         font-family: 'Nunito', sans-serif;
         font-weight: 200;
         height: 100vh;
         margin: 0;
     }
-
+ 
     .full-height {
         height: 100vh;
     }
-
+ 
     .flex-center {
         align-items: center;
         display: flex;
         justify-content: center;
     }
-
+ 
     .position-ref {
         position: relative;
     }
-
+ 
     .top-right {
         position: absolute;
         right: 10px;
         top: 18px;
     }
-
+ 
     .top-left {
         position: absolute;
         left: 10px;
         top: 18px;
     }
-
+ 
     .content {
         text-align: center;
     }
-
+ 
     .title {
         font-size: 50px;
-
+ 
     }
-
+    .h1 {
+        font-size: 15px;
+ 
+    }
+ 
     .links>a {
         color: #636b6f;
         padding: 0 25px;
@@ -238,17 +246,20 @@
         text-decoration: none;
         text-transform: uppercase;
     }
-
+ 
     .m-b-md {
+ 
         margin-bottom: 30px;
+        font-size: 50px;
     }
-
+   
+ 
     .rectangle {
         height: 50px;
         width: 100px;
         background-color: #555;
     }
-
+ 
     .button {
         background-color: #4CAF50;
         border: none;
@@ -262,30 +273,30 @@
         cursor: pointer;
     }
 </style>
-
+ 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
+ 
+ 
     <title>Room Monitoring System</title>
-
-
+ 
+ 
 </head>
-
+ 
 <body>
     <div class="flex-center position-ref full-height">
              
         <div class="top-left">
-
-
-
-            <div class="title m-b-md links">
+ 
+ 
+ 
+            <div class="title m-b-md links" >
                 Room Monitoring System
             </div>
             <div><img src="{{url('images/4floor.jpg ')}} "></div>
-            
-
+           
+ 
             <!-- Color Room Blog -->
             <div>
                 <!-- AJ room -->
@@ -293,71 +304,71 @@
                     <div id='BlogAJ' style="position:absolute; top:100px; right:-100px; z-index:3">
                         <canvas id="canvasAJ" width="75" height="75" position="Center"></canvas>
                     </div>
-                    <div id='CharacterAJ' style="position:absolute; top:120px; right:-250px; z-index:3">
+                    <div id='CharacterAJ' class="h3" style="position:absolute; top:120px; right:-240px; z-index:3">
                         <h3>ห้องพักอาจารย์</h3>
                     </div>
                 </div>
-
+ 
                 <!-- LAB -->
                 <div>
                     <div id='BlogLAB' style="position:absolute; top:150px; right:-100px; z-index:3">
                         <canvas id="canvasLABdemo" width="75" height="75" position="Center"></canvas>
                     </div>
-                    <div id='CharacterLABdemo' style="position:absolute; top:170px; right:-195px; z-index:3">
+                    <div id='CharacterLABdemo' class="h3" style="position:absolute; top:170px; right:-195px; z-index:3">
                         <h3>ห้องแลป</h3>
                     </div>
                 </div>
-
+ 
                 <!-- Busy -->
                 <div>
-                    <div id='BlogBusy' style="position:absolute; top:200px; right:-100px; z-index:3">
+                    <div id='BlogBusy'  style="position:absolute; top:200px; right:-100px; z-index:3">
                         <canvas id="canvasBusy" width="75" height="75" position="Center"></canvas>
                     </div>
-                    <div id='CharacterBusy' style="position:absolute; top:220px; right:-175px; z-index:3">
+                    <div id='CharacterBusy' class="h3" style="position:absolute; top:220px; right:-180px; z-index:3">
                         <h3>ไม่ว่าง</h3>
                     </div>
                 </div>
-
+ 
                 <!-- Avaible -->
                 <div>
                     <div id='BlogAvai' style="position:absolute; top:250px; right:-100px; z-index:3">
                         <canvas id="canvasAvai" width="75" height="75" position="Center"></canvas>
                     </div>
-                    <div id='CharacterBusy' style="position:absolute; top:270px; right:-155px; z-index:3">
+                    <div id='CharacterBusy' class="h3" style="position:absolute; top:270px; right:-165px; z-index:3">
                         <h3>ว่าง</h3>
                     </div>
                 </div>
-
+ 
                 <!-- Shop -->
                 <div>
                     <div id='BlogShop' style="position:absolute; top:300px; right:-100px; z-index:3">
                         <canvas id="canvasShop" width="75" height="75" position="Center"></canvas>
                     </div>
-                    <div id='CharacterShop' style="position:absolute; top:320px; right:-255px; z-index:3">
+                    <div id='CharacterShop' class="h3" style="position:absolute; top:320px; right:-245px; z-index:3">
                         <h3>ร้านค้านักศึกษา</h3>
                     </div>
                 </div>
-
+ 
                 <!-- Student Room -->
                 <div>
                     <div id='BlogStudent' style="position:absolute; top:350px; right:-100px; z-index:3">
                         <canvas id="canvasStudent" width="75" height="75" position="Center"></canvas>
                     </div>
-                    <div id='CharacterStudent' style="position:absolute; top:370px; right:-235px; z-index:3">
+                    <div id='CharacterStudent' class="h3" style="position:absolute; top:370px; right:-230px; z-index:3">
                         <h3>ห้องนักศึกษา</h3>
                     </div>
                 </div>
             </div>
-
+ 
             <!-- Button -->
             <div>
             <div id='BlogButton' style="position:absolute; top:450px; right:-185px; z-index:3">
                         <div><a href="/" class="button">4th Floor</a></div>
                         <div><a href="/fifth_floor" class="button">5th Floor</a></div>
             </div>
-
-            
-            
+ 
+           
+           
                     <!-- Color Explain -->
             <script>
                 // AJ Room
@@ -366,35 +377,35 @@
                 ctx.rect(30, 30, 200, 200);
                 ctx.fillStyle = "#0000FF";
                 ctx.fill();
-
+ 
                 // LAB Room
                 var c = document.getElementById("canvasLABdemo");
                 var ctx = c.getContext("2d");
                 ctx.rect(30, 30, 200, 200);
                 ctx.fillStyle = "#800080";
                 ctx.fill();
-
+ 
                 // Busy
                 var c = document.getElementById("canvasBusy");
                 var ctx = c.getContext("2d");
                 ctx.rect(30, 30, 200, 200);
                 ctx.fillStyle = "#FF0000";
                 ctx.fill();
-
+ 
                 // Avaible
                 var c = document.getElementById("canvasAvai");
                 var ctx = c.getContext("2d");
                 ctx.rect(30, 30, 200, 200);
                 ctx.fillStyle = "#99ff99";
                 ctx.fill();
-
+ 
                 // Shop
                 var c = document.getElementById("canvasShop");
                 var ctx = c.getContext("2d");
                 ctx.rect(30, 30, 200, 200);
                 ctx.fillStyle = "#800000";
                 ctx.fill();
-
+ 
                 // Student Room
                 var c = document.getElementById("canvasStudent");
                 var ctx = c.getContext("2d");
@@ -402,7 +413,7 @@
                 ctx.fillStyle = "#FFA500";
                 ctx.fill();
             </script>
-
+ 
             <!-- Room -->
             <div>
                 <!-- 402 -->
@@ -414,7 +425,7 @@
                         <h1>402</h1>
                     </div>
                 </div>
-
+ 
                 <!-- 401 -->
                 <div>
                     <div id='Blog401' style="position:absolute; top:122px; right:160px; z-index:3">
@@ -424,7 +435,7 @@
                         <h1>401</h1>
                     </div>
                 </div>
-
+ 
                 <!-- 422 -->
                 <div>
                     <div id='Blog422' style="position:absolute; top:120px; right:229px; z-index:3">
@@ -434,7 +445,7 @@
                         <h1>422</h1>
                     </div>
                 </div>
-
+ 
                 <!-- 415 -->
                 <div>
                     <div id='Blog415' style="position:absolute; top:258px; right:294px; z-index:3">
@@ -444,7 +455,7 @@
                         <h1>415</h1>
                     </div>
                 </div>
-
+ 
                 <!-- LIL -->
                 <div>
                     <div id='BlogLIL' style="position:absolute; top:258px; right:362px; z-index:3">
@@ -454,7 +465,7 @@
                         <h1>LIL</h1>
                     </div>
                 </div>
-
+ 
                 <!-- DentLab -->
                 <div>
                     <div id='BlogDent' style="position:absolute; top:326px; right:435px; z-index:3">
@@ -464,7 +475,7 @@
                         <h2>Dent</h2>
                     </div>
                 </div>
-
+ 
                 <!-- 413 -->
                 <div>
                     <div id='Blog413' style="position:absolute; top:377px; right:435px; z-index:3">
@@ -474,7 +485,7 @@
                         <h1>413</h1>
                     </div>
                 </div>
-
+ 
                 <!-- 412 -->
                 <div>
                     <div id='Blog412' style="position:absolute; top:462px; right:350px; z-index:3">
@@ -484,7 +495,7 @@
                         <h2>412</h2>
                     </div>
                 </div>
-
+ 
                 <!-- LAB -->
                 <div>
                     <div id='BlogLAB' style="position:absolute; top:462px; right:288px; z-index:3">
@@ -494,7 +505,7 @@
                         <h2>LAB</h2>
                     </div>
                 </div>
-
+ 
                 <!-- 411-->
                 <div>
                     <div id='Blog411' style="position:absolute; top:462px; right:226px; z-index:3">
@@ -504,7 +515,7 @@
                         <h2>411</h2>
                     </div>
                 </div>
-
+ 
                 <!-- 414-->
                 <div>
                     <div id='Blog414' style="position:absolute; top:363px; right:362px; z-index:3">
@@ -514,7 +525,7 @@
                         <h3>414</h3>
                     </div>
                 </div>
-
+ 
                 <!-- 410-->
                 <div>
                     <div id='Blog410' style="position:absolute; top:437px; right:194px; z-index:3">
@@ -524,7 +535,7 @@
                         <h4>410</h4>
                     </div>
                 </div>
-
+ 
                 <!-- 409-->
                 <div>
                     <div id='Blog409' style="position:absolute; top:424px; right:157px; z-index:3">
@@ -534,7 +545,7 @@
                         <h4>409</h4>
                     </div>
                 </div>
-
+ 
                 <!-- 403 -->
                 <div>
                     <div id='Blog403' style="position:absolute; top:259px; right:90px; z-index:3">
@@ -544,7 +555,7 @@
                         <h3>403</h3>
                     </div>
                 </div>
-
+ 
                 <!-- 404 -->
                 <div>
                     <div id='Blog404' style="position:absolute; top:288px; right:90px; z-index:3">
@@ -555,34 +566,40 @@
                     </div>
                 </div>
             </div>
-
-            <div id='4floor' style="position:absolute; top:580px; right:245px; z-index:3">
+ 
+            <div id='4floor' class="h1" style="position:absolute; top:580px; right:245px; z-index:3">
                 <h1>4th Floor</h1>
             </div>
-
+ 
             <br>
-
-
+ 
+ 
+            <div>
             <p>Date: <span id="datetime"></span></p>
+            </div>
+ 
             <script>
                 var dt = new Date();
                 document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
             </script>
-
-
+ 
+            <div style="position:absolute; top:650px; right:440px; z-index:3">
+            <p>Time : <span class="slider-time">9:00AM</span></p>
+            </div>
+           
             <!-- Slider -->
             <div>
-                <div id="time-range">
-                    <p>Time : <span class="slider-time">9:00 AM</span></p>
+           
+                <div id="time-range" style="position:absolute; top:670px; right:0px; z-index:3">                    
                     <div class="sliders_step1">
                         <div id="slider-range"></div>
                     </div>
                 </div>
             </div>
-
+ 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-
+ 
             <!-- Farm -->
             <script>
                 // FARM SCRIPT######################################
@@ -593,12 +610,12 @@
                     step: 30,
                     values: [540],
                     slide: function(e, ui) {
-
+ 
                         var timecon = Math.floor(ui.values[0])
-
+ 
                         var hours1 = Math.floor(ui.values[0] / 60);
                         var minutes1 = ui.values[0] - (hours1 * 60);
-
+ 
                         if (hours1.length == 1) hours1 = '0' + hours1;
                         if (minutes1.length == 1) minutes1 = '0' + minutes1;
                         if (minutes1 == 0) minutes1 = '00';
@@ -618,12 +635,12 @@
                             hours1 = 12;
                             minutes1 = minutes1;
                         }
-
+ 
                         $('.slider-time').html(hours1 + ':' + minutes1);
-
+ 
                         var hours2 = Math.floor(ui.values[1] / 60);
                         var minutes2 = ui.values[1] - (hours2 * 60);
-
+ 
                         if (hours2.length == 1) hours2 = '0' + hours2;
                         if (minutes2.length == 1) minutes2 = '0' + minutes2;
                         if (minutes2 == 0) minutes2 = '00';
@@ -642,13 +659,13 @@
                             hours2 = hours2;
                             minutes2 = minutes2 + " AM";
                         }
-
-
+ 
+ 
                         $('.slider-time2').html(hours2 + ':' + minutes2);
-
-
-
-
+ 
+ 
+ 
+ 
                         // 402
                         var c = $('#canvas402');
                         var context = c[0].getContext('2d');
@@ -662,20 +679,20 @@
                             context.fillStyle = "#ff0000";
                             context.fillRect(30, 30, 200, 100);
                         }
-
-                        // 401 
+ 
+                        // 401
                         var c = $('#canvas401');
                         var context = c[0].getContext('2d');
                         context.fillStyle = "#FFA500";
                         context.fillRect(30, 30, 200, 100);
-
-                        // 422 
+ 
+                        // 422
                         var c = $('#canvas422');
                         var context = c[0].getContext('2d');
                         context.fillStyle = "#800000";
                         context.fillRect(30, 30, 200, 100);
-
-                        // 415 
+ 
+                        // 415
                         var c = $('#canvas415');
                         var context = c[0].getContext('2d');
                         if (ui.values[0] >= 480 && ui.values[0] <= 570) {
@@ -688,64 +705,64 @@
                             context.fillStyle = "#ff0000";
                             context.fillRect(30, 30, 200, 100);
                         }
-
-                        // LIL 
+ 
+                        // LIL
                         var c = $('#canvasLIL');
                         var context = c[0].getContext('2d');
                         context.fillStyle = "#800080";
                         context.fillRect(30, 30, 200, 100);
-
-                        // Dent 
+ 
+                        // Dent
                         var c = $('#canvasDent');
                         var context = c[0].getContext('2d');
                         context.fillStyle = "#800080";
                         context.fillRect(30, 30, 200, 100);
-
+ 
                         // 413
                         var c = $('#canvas413');
                         var context = c[0].getContext('2d');
                         context.fillStyle = "#0000FF";
                         context.fillRect(30, 30, 200, 100);
-
+ 
                         // 412
                         var c = $('#canvas412');
                         var context = c[0].getContext('2d');
                         context.fillStyle = "#800080";
                         context.fillRect(30, 30, 200, 100);
-
-
+ 
+ 
                         // LAB
                         var c = $('#canvasLAB');
                         var context = c[0].getContext('2d');
                         context.fillStyle = "#800080";
                         context.fillRect(30, 30, 200, 100);
-
+ 
                         // 411
                         var c = $('#canvas411');
                         var context = c[0].getContext('2d');
                         context.fillStyle = "#0000FF";
                         context.fillRect(30, 30, 200, 100);
-
+ 
                         // 414
                         var c = $('#canvas414');
                         var context = c[0].getContext('2d');
                         context.fillStyle = "#0000FF";
                         context.fillRect(30, 30, 200, 100);
-
+ 
                         // 410
                         var c = $('#canvas410');
                         var context = c[0].getContext('2d');
                         context.fillStyle = "#0000FF";
                         context.fillRect(30, 30, 200, 100);
-
-
+ 
+ 
                         // 409
                         var c = $('#canvas409');
                         var context = c[0].getContext('2d');
                         context.fillStyle = "#0000FF";
                         context.fillRect(30, 30, 200, 100);
-
-
+ 
+ 
                         // 403
                         var c = $('#canvas403');
                         var context = c[0].getContext('2d');
@@ -759,7 +776,7 @@
                             context.fillStyle = "#ff0000";
                             context.fillRect(30, 30, 200, 100);
                         }
-
+ 
                         // 404
                         var c = $('#canvas404');
                         var context = c[0].getContext('2d');
@@ -773,16 +790,16 @@
                             context.fillStyle = "#ff0000";
                             context.fillRect(30, 30, 200, 100);
                         }
-
+ 
                     }
                 });
             </script>
-
-
+ 
+ 
         </div>
-
+ 
     </div>
-
+ 
 </body>
-
+ 
 </html>
