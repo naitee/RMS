@@ -418,7 +418,7 @@
             <div>
                 <!-- 402 -->
                 <div>
-                    <div id='Blog402' style="position:absolute; top:122px; right:91px; z-index:3">
+                    <div id='Blog402' style="position:absolute; top:119px; right:91px; z-index:3">
                         <canvas id="canvas402" width="96" height="220" position="Center"></canvas>
                     </div>
                     <div id='Character402' style="position:absolute; top:130px; right:95px; z-index:3">
@@ -428,7 +428,7 @@
  
                 <!-- 401 -->
                 <div>
-                    <div id='Blog401' style="position:absolute; top:122px; right:160px; z-index:3">
+                    <div id='Blog401' style="position:absolute; top:119px; right:160px; z-index:3">
                         <canvas id="canvas401" width="95" height="220" position="Center"></canvas>
                     </div>
                     <div id='Character402' style="position:absolute; top:130px; right:165px; z-index:3">
@@ -438,8 +438,8 @@
  
                 <!-- 422 -->
                 <div>
-                    <div id='Blog422' style="position:absolute; top:120px; right:229px; z-index:3">
-                        <canvas id="canvas422" width="97" height="99" position="Center"></canvas>
+                    <div id='Blog422' style="position:absolute; top:119px; right:229px; z-index:3">
+                        <canvas id="canvas422" width="97" height="100" position="Center"></canvas>
                     </div>
                     <div id='Character422' style="position:absolute; top:130px; right:234px; z-index:3">
                         <h1>422</h1>
@@ -671,26 +671,26 @@
                         var context = c[0].getContext('2d');
                         if (ui.values[0] >= 480 && ui.values[0] <= 570) {
                             context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 200, 100);
+                            context.fillRect(30, 30, 200, 103);
                         } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
                             context.fillStyle = "#99ff99";
-                            context.fillRect(30, 30, 200, 100);
+                            context.fillRect(30, 30, 200, 103);
                         } else {
                             context.fillStyle = "#ff0000";
-                            context.fillRect(30, 30, 200, 100);
+                            context.fillRect(30, 30, 200, 103);
                         }
  
                         // 401
                         var c = $('#canvas401');
                         var context = c[0].getContext('2d');
                         context.fillStyle = "#FFA500";
-                        context.fillRect(30, 30, 200, 100);
+                        context.fillRect(30, 30, 200, 103);
  
                         // 422
                         var c = $('#canvas422');
                         var context = c[0].getContext('2d');
                         context.fillStyle = "#800000";
-                        context.fillRect(30, 30, 200, 100);
+                        context.fillRect(30, 30, 200, 103);
  
                         // 415
                         var c = $('#canvas415');
