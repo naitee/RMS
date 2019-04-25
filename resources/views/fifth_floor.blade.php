@@ -638,19 +638,30 @@
             </div>
  
             <br>
+            <br>
  
-            <div>
-            <p>Date: <span id="datetime"></span></p>
-            </div>
- 
-            <script>
-                var dt = new Date();
-                document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
-            </script>
- 
-            <div style="position:absolute; top:650px; right:450px; z-index:3">
-            <p>Time : <span class="slider-time">9:00 AM</span></p>
-            </div>
+            Date :<span id="today"></span>
+                <script>
+                    var today = new Date();
+                    var dd = today.getDate();
+                    var mm = today.getMonth() + 1;
+                    var yyyy = today.getFullYear();
+                    if (dd < 10) {
+                        dd = '0' + dd;
+                    }
+
+                    if (mm < 10) {
+                        mm = '0' + mm;
+                    }
+                    current = ' ' + mm + '-' + dd + '-' + yyyy;
+                    document.getElementById("today").innerHTML = current
+                </script>
+
+
+
+                <div style="position:absolute; top:650px; right:460px; z-index:3">
+                    <p>Time : <span class="slider-time">9:00AM</span></p>
+                </div>
            
             <!-- Slider -->
             <div>

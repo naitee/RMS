@@ -63,14 +63,6 @@
                 margin-bottom: 30px;
             }
 
-            effect {
-                display: inline-block;
-            }
-
-            effect > a {
-                
-            }
-
             .cool-link::after {
                 content: '';
                 display: block;
