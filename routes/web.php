@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 Route::resource('/fouth_floor', 'fouth_floorController');
 Route::resource('/fifth_floor', 'fifth_floorController');
+Route::resource('/about_us', 'about_usController');

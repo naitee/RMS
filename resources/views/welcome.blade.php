@@ -1,100 +1,118 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>RMS</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <title>RMS</title>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color:powderblue;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+    <link rel="shortcut icon" type="image/x-icon" href="images/RMS.ico" />
 
-            .full-height {
-                height: 100vh;
-            }
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+    <!-- Styles -->
+    <style>
+        html,
+        body {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 200;
+            height: 100vh;
+            margin: 0;
+        }
 
-            .position-ref {
-                position: relative;
-            }
+        .bg {
+            background-image: url("images/bg.jpg");
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+            height: 100%;
 
-            .content {
-                text-align: center;
-            }
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
-            .title {
-                font-size: 84px;
-            }
+        .full-height {
+            height: 100vh;
+        }
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-                display: inline-block;
-            }
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
+        .position-ref {
+            position: relative;
+        }
 
-            .cool-link::after {
-                content: '';
-                display: block;
-                width: 0;
-                height: 2px;
-                background: #636b6f;
-                transition: width .3s
-            }
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
 
-            .cool-link:hover::after {
-                width: 100%;
-                transition: width .3s;
-            }
-        </style>
-    </head>
-    <body>
+        .content {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 84px;
+        }
+
+        .links>a {
+            color: #000000;
+            padding: 0 25px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        .m-b-md {
+            margin-bottom: 30px;
+        }
+
+        .cool-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #636b6f;
+            transition: width .3s
+        }
+
+        .cool-link:hover::after {
+            width: 100%;
+            transition: width .3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+            <div class="top-right links">
+                @auth
+                <a href="{{ url('/home') }}">Home</a>
+                @else
+                <a href="{{ route('login') }}">Login</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
+                @if (Route::has('register'))
+                <a href="{{ route('register') }}">Register</a>
+                @endif
+                @endauth
+            </div>
             @endif
 
             <div class="content">
+                <div>
+                    <img src="{{url('images/picRMS.png ')}} ">
+                </div>
+
                 <div class="title m-b-md">
                     Room Monitoring System
                 </div>
@@ -109,8 +127,11 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a-->
                     <a href="/fouth_floor" class="button cool-link">4th Floor</a>
                     <a href="/fifth_floor" class="button cool-link">5th Floor</a>
+                    <a href="/about_us" class="button cool-link">About Us</a>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

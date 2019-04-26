@@ -1,3 +1,17 @@
+<?php $client = new GuzzleHttp\Client(['headers' => ['Teamup-Token' => 'b3599f06270e7573e706cd1078f92249368ecd11d3a06d1da242641de81fd6a8']]);
+$sdate = '2018-8-10';
+$edate = '2018-8-10';
+$result = $client->get('https://teamup.com/ksg7y4nwkfp7q6xyio/events?startDate=' . $sdate . '&endDate=' . $edate);
+date_default_timezone_set("Asia/Bangkok");
+$data = json_decode($result->getBody());
+for ($i = 0; $i < sizeof($data->events); $i++) {
+    $room[$i] = $data->events[$i]->who;
+    preg_match('/\([0-9]+\)/', $room[$i], $match[$i]);
+    $match[$i] = substr($match[$i][0], 1, -1);
+    $Stime[$i] = date('G', strtotime($data->events[$i]->start_dt)) * 60 + date('i', strtotime($data->events[$i]->start_dt));
+    $Etime[$i] = date('G', strtotime($data->events[$i]->end_dt)) * 60 + date('i', strtotime($data->events[$i]->end_dt));
+}
+?>
 <!doctype html>
 
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -6,6 +20,8 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
 <link href="https://fonts.googleapis.com/css?family=Athiti|Pattaya" rel="stylesheet">
+<link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+<link rel="stylesheet" href="css/style.css">
 <!-- Styles -->
 <style>
     /* FARM CODE TIME SLIDER */
@@ -190,12 +206,21 @@
 
     html,
     body {
-        background-color: powderblue;
+
         color: #FFFFFF;
         font-family: 'Nunito', sans-serif;
         font-weight: 200;
         height: 100vh;
         margin: 0;
+    }
+
+    .bg {
+        background-image: url("images/bg2.png");
+        height: 100%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .full-height {
@@ -274,151 +299,262 @@
         cursor: pointer;
     }
 
-    img { 
-        border:4px solid #021a40;
+    img {
+        border: 4px solid #021a40;
     }
+
+    #calendar {
+        margin-left: auto;
+        margin-right: auto;
+        width: 320px;
+        font-family: 'Lato', sans-serif;
+    }
+
+    #calendar_weekdays div {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    #calendar_content,
+    #calendar_weekdays,
+    #calendar_header {
+        position: relative;
+        width: 320px;
+        overflow: hidden;
+        float: left;
+        z-index: 10;
+    }
+
+    #calendar_weekdays div,
+    #calendar_content div {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        text-align: center;
+        background-color: #FFFFFF;
+        color: #787878;
+    }
+
+    #calendar_content {
+        -webkit-border-radius: 0px 0px 12px 12px;
+        -moz-border-radius: 0px 0px 12px 12px;
+        border-radius: 0px 0px 12px 12px;
+    }
+
+    #calendar_content div {
+        float: left;
+    }
+
+    #calendar_content div:hover {
+        background-color: #F8F8F8;
+    }
+
+    #calendar_content div.blank {
+        background-color: #E8E8E8;
+    }
+
+    #calendar_header,
+    #calendar_content div.today {
+        zoom: 1;
+        filter: alpha(opacity=70);
+        opacity: 0.7;
+    }
+
+    #calendar_content div.today {
+        color: #FFFFFF;
+    }
+
+    #calendar_header {
+        width: 100%;
+        height: 37px;
+        text-align: center;
+        background-color: #FF6860;
+        padding: 18px 0;
+        -webkit-border-radius: 12px 12px 0px 0px;
+        -moz-border-radius: 12px 12px 0px 0px;
+        border-radius: 12px 12px 0px 0px;
+    }
+
+    #calendar_header h1 {
+        font-size: 1.5em;
+        color: #FFFFFF;
+        float: left;
+        width: 70%;
+    }
+
+    i[class^=icon-chevron] {
+        color: #FFFFFF;
+        float: left;
+        width: 15%;
+        border-radius: 50%;
+    }
+
+    .round {
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: #D0D3D4;
+            opacity: .7;
+        }
 </style>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
-
-    <title>Room Monitoring System</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/RMS.ico" />
+    <title>RMS: 4th floor</title>
 
 
 </head>
 
 <body>
-    <div class="flex-center position-ref full-height">
+    <div class="bg">
+        <div class="flex-center position-ref full-height">
 
-        <div class="top-left">
-
-
-
-            <div class="title m-b-md links" >
-                <strong><font color="#636b6f">Room Monitoring System</font></strong>
-            </div>
-            <div><img src="{{url('images/4floor.jpg ')}} " ></div>
+            <div class="top-left">
 
 
-            <!-- Color Room Blog -->
-            <div>
-                <!-- AJ room -->
-                <div>
-                    <div id='BlogAJ' style="position:absolute; top:100px; right:-100px; z-index:3">
-                        <canvas id="canvasAJ" width="75" height="75" position="Center"></canvas>
+
+                <div class="title m-b-md links">
+                    <strong>
+                        <font color="#636b6f">Room Monitoring System</font>
+                    </strong>
+                </div>
+                <div><img src="{{url('images/4floor.jpg ')}} "></div>
+
+
+                <!-- Color Room Blog -->
+                <div >
+                    <!-- AJ room -->
+                    <div>
+                        <div id='BlogAJ' style="position:absolute; top:100px; right:-100px; z-index:3 ">
+                            <canvas id="canvasAJ" width="75" height="75" position="Center"></canvas>
+                        </div>
+                        <div id='CharacterAJ' class="h3" style="position:absolute; top:120px; right:-240px; z-index:3">
+                            <font color="#636b6f">
+                                <h3>ห้องพักอาจารย์</h3>
+                            </font>
+                        </div>
                     </div>
-                    <div id='CharacterAJ' class="h3" style="position:absolute; top:120px; right:-240px; z-index:3">
-                    <font color="#636b6f"><h3>ห้องพักอาจารย์</h3></font>
+
+                    <!-- LAB -->
+                    <div>
+                        <div id='BlogLAB' style="position:absolute; top:150px; right:-100px; z-index:3">
+                            <canvas id="canvasLABdemo" width="75" height="75" position="Center"></canvas>
+                        </div>
+                        <div id='CharacterLABdemo' class="h3" style="position:absolute; top:170px; right:-195px; z-index:3">
+                            <font color="#636b6f">
+                                <h3>ห้องแลป</h3>
+                            </font>
+                        </div>
+                    </div>
+
+                    <!-- Busy -->
+                    <div>
+                        <div id='BlogBusy' style="position:absolute; top:200px; right:-100px; z-index:3">
+                            <canvas id="canvasBusy" width="75" height="75" position="Center"></canvas>
+                        </div>
+                        <div id='CharacterBusy' class="h3" style="position:absolute; top:220px; right:-180px; z-index:3">
+                            <font color="#636b6f">
+                                <h3>ไม่ว่าง</h3>
+                            </font>
+                        </div>
+                    </div>
+
+                    <!-- Avaible -->
+                    <div>
+                        <div id='BlogAvai' style="position:absolute; top:250px; right:-100px; z-index:3">
+                            <canvas id="canvasAvai" width="75" height="75" position="Center"></canvas>
+                        </div>
+                        <div id='CharacterBusy' class="h3" style="position:absolute; top:270px; right:-165px; z-index:3">
+                            <font color="#636b6f">
+                                <h3>ว่าง</h3>
+                            </font>
+                        </div>
+                    </div>
+
+                    <!-- Shop -->
+                    <div>
+                        <div id='BlogShop' style="position:absolute; top:300px; right:-100px; z-index:3">
+                            <canvas id="canvasShop" width="75" height="75" position="Center"></canvas>
+                        </div>
+                        <div id='CharacterShop' class="h3" style="position:absolute; top:320px; right:-245px; z-index:3">
+                            <font color="#636b6f">
+                                <h3>ร้านค้านักศึกษา</h3>
+                            </font>
+                        </div>
+                    </div>
+
+                    <!-- Student Room -->
+                    <div>
+                        <div id='BlogStudent' style="position:absolute; top:350px; right:-100px; z-index:3">
+                            <canvas id="canvasStudent" width="75" height="75" position="Center"></canvas>
+                        </div>
+                        <div id='CharacterStudent' class="h3" style="position:absolute; top:370px; right:-230px; z-index:3">
+                            <font color="#636b6f">
+                                <h3>ห้องนักศึกษา</h3>
+                            </font>
+                        </div>
                     </div>
                 </div>
 
-                <!-- LAB -->
+                <!-- Button -->
                 <div>
-                    <div id='BlogLAB' style="position:absolute; top:150px; right:-100px; z-index:3">
-                        <canvas id="canvasLABdemo" width="75" height="75" position="Center"></canvas>
-                    </div>
-                    <div id='CharacterLABdemo' class="h3" style="position:absolute; top:170px; right:-195px; z-index:3">
-                    <font color="#636b6f"><h3>ห้องแลป</h3></font>
-                    </div>
-                </div>
-
-                <!-- Busy -->
-                <div>
-                    <div id='BlogBusy' style="position:absolute; top:200px; right:-100px; z-index:3">
-                        <canvas id="canvasBusy" width="75" height="75" position="Center"></canvas>
-                    </div>
-                    <div id='CharacterBusy' class="h3" style="position:absolute; top:220px; right:-180px; z-index:3">
-                    <font color="#636b6f"><h3>ไม่ว่าง</h3></font>
-                    </div>
-                </div>
-
-                <!-- Avaible -->
-                <div>
-                    <div id='BlogAvai' style="position:absolute; top:250px; right:-100px; z-index:3">
-                        <canvas id="canvasAvai" width="75" height="75" position="Center"></canvas>
-                    </div>
-                    <div id='CharacterBusy' class="h3" style="position:absolute; top:270px; right:-165px; z-index:3">
-                    <font color="#636b6f"><h3>ว่าง</h3></font>
-                    </div>
-                </div>
-
-                <!-- Shop -->
-                <div>
-                    <div id='BlogShop' style="position:absolute; top:300px; right:-100px; z-index:3">
-                        <canvas id="canvasShop" width="75" height="75" position="Center"></canvas>
-                    </div>
-                    <div id='CharacterShop' class="h3" style="position:absolute; top:320px; right:-245px; z-index:3">
-                    <font color="#636b6f"><h3>ร้านค้านักศึกษา</h3></font>
-                    </div>
-                </div>
-
-                <!-- Student Room -->
-                <div>
-                    <div id='BlogStudent' style="position:absolute; top:350px; right:-100px; z-index:3">
-                        <canvas id="canvasStudent" width="75" height="75" position="Center"></canvas>
-                    </div>
-                    <div id='CharacterStudent' class="h3" style="position:absolute; top:370px; right:-230px; z-index:3">
-                    <font color="#636b6f"><h3>ห้องนักศึกษา</h3></font>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Button -->
-            <div>
-            <div id='BlogButton' style="position:absolute; top:450px; right:-185px; z-index:3">
+                    <div id='BlogButton' style="position:absolute; top:450px; right:-185px; z-index:3">
+                        <div><a href="/" class="button">" Home " </a></div>
                         <div><a href="/fouth_floor" class="button">4th Floor</a></div>
                         <div><a href="/fifth_floor" class="button">5th Floor</a></div>
-            </div>
- 
-           
-           
-            <!-- Color Explain -->
-            <script>
-                // AJ Room
-                var c = document.getElementById("canvasAJ");
-                var ctx = c.getContext("2d");
-                ctx.rect(30, 30, 200, 200);
-                ctx.fillStyle = "#0000FF";
-                ctx.fill();
- 
-                // LAB Room
-                var c = document.getElementById("canvasLABdemo");
-                var ctx = c.getContext("2d");
-                ctx.rect(30, 30, 200, 200);
-                ctx.fillStyle = "#800080";
-                ctx.fill();
- 
-                // Busy
-                var c = document.getElementById("canvasBusy");
-                var ctx = c.getContext("2d");
-                ctx.rect(30, 30, 200, 200);
-                ctx.fillStyle = "#FF0000";
-                ctx.fill();
- 
-                // Avaible
-                var c = document.getElementById("canvasAvai");
-                var ctx = c.getContext("2d");
-                ctx.rect(30, 30, 200, 200);
-                ctx.fillStyle = "#99ff99";
-                ctx.fill();
- 
-                // Shop
-                var c = document.getElementById("canvasShop");
-                var ctx = c.getContext("2d");
-                ctx.rect(30, 30, 200, 200);
-                ctx.fillStyle = "#800000";
-                ctx.fill();
- 
-                // Student Room
-                var c = document.getElementById("canvasStudent");
-                var ctx = c.getContext("2d");
-                ctx.rect(30, 30, 200, 200);
-                ctx.fillStyle = "#FFA500";
-                ctx.fill();
-            </script>
- 
+                    </div>
+                </div>
+
+
+
+                <!-- Color Explain -->
+                <script>
+                    // AJ Room
+                    var c = document.getElementById("canvasAJ");
+                    var ctx = c.getContext("2d");
+                    ctx.rect(30, 30, 200, 200);
+                    ctx.fillStyle = "#0000FF";
+                    ctx.fill();
+
+                    // LAB Room
+                    var c = document.getElementById("canvasLABdemo");
+                    var ctx = c.getContext("2d");
+                    ctx.rect(30, 30, 200, 200);
+                    ctx.fillStyle = "#800080";
+                    ctx.fill();
+
+                    // Busy
+                    var c = document.getElementById("canvasBusy");
+                    var ctx = c.getContext("2d");
+                    ctx.rect(30, 30, 200, 200);
+                    ctx.fillStyle = "#FF0000";
+                    ctx.fill();
+
+                    // Avaible
+                    var c = document.getElementById("canvasAvai");
+                    var ctx = c.getContext("2d");
+                    ctx.rect(30, 30, 200, 200);
+                    ctx.fillStyle = "#99ff99";
+                    ctx.fill();
+
+                    // Shop
+                    var c = document.getElementById("canvasShop");
+                    var ctx = c.getContext("2d");
+                    ctx.rect(30, 30, 200, 200);
+                    ctx.fillStyle = "#800000";
+                    ctx.fill();
+
+                    // Student Room
+                    var c = document.getElementById("canvasStudent");
+                    var ctx = c.getContext("2d");
+                    ctx.rect(30, 30, 200, 200);
+                    ctx.fillStyle = "#FFA500";
+                    ctx.fill();
+                </script>
+
 
 
                 <!-- Color Explain -->
@@ -618,15 +754,25 @@
                         </div>
                     </div>
                 </div>
-
-                <div id='4floor' class="h1" style="position:absolute; top:580px; right:245px; z-index:3">
-                <font color="#636b6f"><h1>4th Floor</h1></font>
+                
+                <div id='4floor' class="h1" style="position:absolute; top:590px; right:254px; z-index:3">
+                    <font color="#636b6f">
+                        <h1>4th Floor</h1>
+                    </font>
                 </div>
 
+                <!-- <div id='4floor' class="h1" style="position:absolute; top:50px; right:-800px; z-index:3">
+                    <font color="lightcoral">
+                        <h1>Please select DATE</h1>
+                    </font>
+                </div> -->
+
                 <br>
                 <br>
-        
-                <strong><font color="#636b6f">Date :<span id="today"></span></font></strong>
+
+                <strong>
+                    <font color="#636b6f">Date :<span id="today"></span></font>
+                </strong>
                 <script>
                     var today = new Date();
                     var dd = today.getDate();
@@ -642,10 +788,14 @@
                     current = ' ' + mm + '-' + dd + '-' + yyyy;
                     document.getElementById("today").innerHTML = current
                 </script>
-            
+
 
                 <div style="position:absolute; top:660px; right:450px; z-index:3">
-                <strong><font color="#636b6f"><p>Time : <span class="slider-time">9:00AM</span></p></font></strong>
+                    <strong>
+                        <font color="#636b6f">
+                            <p>Time : <span class="slider-time">9:00AM</span></p>
+                        </font>
+                    </strong>
                 </div>
 
                 <!-- Slider -->
@@ -663,6 +813,10 @@
 
                 <!-- Farm -->
                 <script>
+                    // On document ready
+                    $(document).ready(function() {
+                        draw();
+                    });
                     // FARM SCRIPT######################################
                     $("#slider-range").slider({
                         // range: true,
@@ -671,12 +825,9 @@
                         step: 30,
                         values: [540],
                         slide: function(e, ui) {
-
                             var timecon = Math.floor(ui.values[0])
-
                             var hours1 = Math.floor(ui.values[0] / 60);
                             var minutes1 = ui.values[0] - (hours1 * 60);
-
                             if (hours1.length == 1) hours1 = '0' + hours1;
                             if (minutes1.length == 1) minutes1 = '0' + minutes1;
                             if (minutes1 == 0) minutes1 = '00';
@@ -696,12 +847,9 @@
                                 hours1 = 12;
                                 minutes1 = minutes1;
                             }
-
                             $('.slider-time').html(hours1 + ':' + minutes1);
-
                             var hours2 = Math.floor(ui.values[1] / 60);
                             var minutes2 = ui.values[1] - (hours2 * 60);
-
                             if (hours2.length == 1) hours2 = '0' + hours2;
                             if (minutes2.length == 1) minutes2 = '0' + minutes2;
                             if (minutes2 == 0) minutes2 = '00';
@@ -720,146 +868,263 @@
                                 hours2 = hours2;
                                 minutes2 = minutes2 + " AM";
                             }
-
-
                             $('.slider-time2').html(hours2 + ':' + minutes2);
-
-
-
-
-                            // 402
-                            var c = $('#canvas402');
-                            var context = c[0].getContext('2d');
-                            if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                                context.fillStyle = "#99ff99";
-                                context.fillRect(30, 30, 200, 103);
-                            } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                                context.fillStyle = "#99ff99";
-                                context.fillRect(30, 30, 200, 103);
-                            } else {
-                                context.fillStyle = "#ff0000";
-                                context.fillRect(30, 30, 200, 103);
-                            }
-
-                            // 401
-                            var c = $('#canvas401');
-                            var context = c[0].getContext('2d');
-                            context.fillStyle = "#FFA500";
-                            context.fillRect(30, 30, 200, 103);
-
-                            // 422
-                            var c = $('#canvas422');
-                            var context = c[0].getContext('2d');
-                            context.fillStyle = "#800000";
-                            context.fillRect(30, 30, 200, 103);
-
-                            // 415
-                            var c = $('#canvas415');
-                            var context = c[0].getContext('2d');
-                            if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                                context.fillStyle = "#99ff99";
-                                context.fillRect(30, 30, 200, 100);
-                            } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                                context.fillStyle = "#99ff99";
-                                context.fillRect(30, 30, 200, 100);
-                            } else {
-                                context.fillStyle = "#ff0000";
-                                context.fillRect(30, 30, 200, 100);
-                            }
-
-                            // LIL
-                            var c = $('#canvasLIL');
-                            var context = c[0].getContext('2d');
-                            context.fillStyle = "#800080";
-                            context.fillRect(30, 30, 200, 100);
-
-                            // Dent
-                            var c = $('#canvasDent');
-                            var context = c[0].getContext('2d');
-                            context.fillStyle = "#800080";
-                            context.fillRect(30, 30, 200, 100);
-
-                            // 413
-                            var c = $('#canvas413');
-                            var context = c[0].getContext('2d');
-                            context.fillStyle = "#0000FF";
-                            context.fillRect(30, 30, 200, 100);
-
-                            // 412
-                            var c = $('#canvas412');
-                            var context = c[0].getContext('2d');
-                            context.fillStyle = "#800080";
-                            context.fillRect(30, 30, 200, 100);
-
-
-                            // LAB
-                            var c = $('#canvasLAB');
-                            var context = c[0].getContext('2d');
-                            context.fillStyle = "#800080";
-                            context.fillRect(30, 30, 200, 100);
-
-                            // 411
-                            var c = $('#canvas411');
-                            var context = c[0].getContext('2d');
-                            context.fillStyle = "#0000FF";
-                            context.fillRect(30, 30, 200, 100);
-
-                            // 414
-                            var c = $('#canvas414');
-                            var context = c[0].getContext('2d');
-                            context.fillStyle = "#0000FF";
-                            context.fillRect(30, 30, 200, 100);
-
-                            // 410
-                            var c = $('#canvas410');
-                            var context = c[0].getContext('2d');
-                            context.fillStyle = "#0000FF";
-                            context.fillRect(30, 30, 200, 100);
-
-
-                            // 409
-                            var c = $('#canvas409');
-                            var context = c[0].getContext('2d');
-                            context.fillStyle = "#0000FF";
-                            context.fillRect(30, 30, 200, 100);
-
-
-                            // 403
-                            var c = $('#canvas403');
-                            var context = c[0].getContext('2d');
-                            if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                                context.fillStyle = "#99ff99";
-                                context.fillRect(30, 30, 200, 100);
-                            } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                                context.fillStyle = "#99ff99";
-                                context.fillRect(30, 30, 200, 100);
-                            } else {
-                                context.fillStyle = "#ff0000";
-                                context.fillRect(30, 30, 200, 100);
-                            }
-
-                            // 404
-                            var c = $('#canvas404');
-                            var context = c[0].getContext('2d');
-                            if (ui.values[0] >= 480 && ui.values[0] <= 570) {
-                                context.fillStyle = "#99ff99";
-                                context.fillRect(30, 30, 200, 100);
-                            } else if (ui.value[0] >= 780 && ui.value[0] <= 870) {
-                                context.fillStyle = "#99ff99";
-                                context.fillRect(30, 30, 200, 100);
-                            } else {
-                                context.fillStyle = "#ff0000";
-                                context.fillRect(30, 30, 200, 100);
-                            }
-
+                            draw(ui);
                         }
                     });
+
+                    function draw(ui) {
+                        // Fake get ui
+                        if (ui == null) {
+                            var ui = {
+                                values: [$('#slider-range').slider("values")]
+                            };
+                        }
+
+                        <?php for ($i = 0; $i < sizeof($match); $i++) : ?>
+                            // Check is room  exists
+                            if ($('#canvas<?= $match[$i] ?>').length) {
+                                var c = $('#canvas<?= $match[$i] ?>');
+                                var context = c[0].getContext('2d');
+                                if (<?= $Stime[$i] ?> <= ui.values[0] && ui.values[0] <= <?= $Etime[$i] ?>) {
+                                    context.fillStyle = "#ff0000";
+                                    context.fillRect(30, 30, 200, 103);
+                                } else {
+                                    context.fillStyle = "#99ff99";
+                                    context.fillRect(30, 30, 200, 103);
+                                }
+                            }
+                        <?php endfor; ?>
+                        // 402
+                        var c = $('#canvas402');
+                        var context = c[0].getContext('2d');
+                        // 401 
+                        var c = $('#canvas401');
+                        var context = c[0].getContext('2d');
+                        context.fillStyle = "#FFA500";
+                        context.fillRect(30, 30, 200, 103);
+                        // 422 
+                        var c = $('#canvas422');
+                        var context = c[0].getContext('2d');
+                        context.fillStyle = "#800000";
+                        context.fillRect(30, 30, 200, 100);
+                        // 415 
+                        var c = $('#canvas415');
+                        var context = c[0].getContext('2d');
+                        context.fillStyle = "#0000FF";
+                        context.fillRect(30, 30, 200, 100);
+                        // LIL 
+                        var c = $('#canvasLIL');
+                        var context = c[0].getContext('2d');
+                        context.fillStyle = "#800080";
+                        context.fillRect(30, 30, 200, 100);
+                        // Dent 
+                        var c = $('#canvasDent');
+                        var context = c[0].getContext('2d');
+                        context.fillStyle = "#800080";
+                        context.fillRect(30, 30, 200, 100);
+                        // 413
+                        var c = $('#canvas413');
+                        var context = c[0].getContext('2d');
+                        context.fillStyle = "#0000FF";
+                        context.fillRect(30, 30, 200, 100);
+                        // 412
+                        var c = $('#canvas412');
+                        var context = c[0].getContext('2d');
+                        context.fillStyle = "#800080";
+                        context.fillRect(30, 30, 200, 100);
+                        // LAB
+                        var c = $('#canvasLAB');
+                        var context = c[0].getContext('2d');
+                        context.fillStyle = "#800080";
+                        context.fillRect(30, 30, 200, 100);
+                        // 411
+                        var c = $('#canvas411');
+                        var context = c[0].getContext('2d');
+                        context.fillStyle = "#0000FF";
+                        context.fillRect(30, 30, 200, 100);
+                        // 414
+                        var c = $('#canvas414');
+                        var context = c[0].getContext('2d');
+                        context.fillStyle = "#0000FF";
+                        context.fillRect(30, 30, 200, 100);
+                        // 410
+                        var c = $('#canvas410');
+                        var context = c[0].getContext('2d');
+                        context.fillStyle = "#0000FF";
+                        context.fillRect(30, 30, 200, 100);
+                        // 409
+                        var c = $('#canvas409');
+                        var context = c[0].getContext('2d');
+                        context.fillStyle = "#0000FF";
+                        context.fillRect(30, 30, 200, 100);
+                        // 403
+                        var c = $('#canvas403');
+                        var context = c[0].getContext('2d');
+                        context.fillStyle = "#0000FF";
+                        context.fillRect(30, 30, 200, 100);
+                        // 404
+                        var c = $('#canvas404');
+                        var context = c[0].getContext('2d');
+                        context.fillStyle = "#0000FF";
+                        context.fillRect(30, 30, 200, 100);
+                    }
                 </script>
 
 
-            </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div style="position:absolute; top:70px; right:-850px;">
+                    <div id="calendar">
+                        <div id="calendar_header"><i class="icon-chevron-left"></i>
+                            <h1></h1><i class="icon-chevron-right"></i>
+                        </div>
+                        <div id="calendar_weekdays"></div>
+                        <div id="calendar_content"></div>
+                    </div>
+                </div>
+
+                <script>
+                    $(function() {
+                        function c() {
+                            p();
+                            var e = h();
+                            var r = 0;
+                            var u = false;
+                            l.empty();
+                            while (!u) {
+                                if (s[r] == e[0].weekday) {
+                                    u = true
+                                } else {
+                                    l.append('<div class="blank"></div>');
+                                    r++
+                                }
+                            }
+                            for (var c = 0; c < 42 - r; c++) {
+                                if (c >= e.length) {
+                                    l.append('<div class="blank"></div>')
+                                } else {
+                                    var v = e[c].day;
+                                    var m = g(new Date(t, n - 1, v)) ? '<div class="today">' : "<div>";
+                                    l.append(m + "" + v + "</div>")
+                                }
+                            }
+                            var y = o[n - 1];
+                            a.css("background-color", y).find("h1").text(i[n - 1] + " " + t);
+                            f.find("div").css("color", y);
+                            l.find(".today").css("background-color", y);
+                            d()
+                        }
+
+                        function h() {
+                            var e = [];
+                            for (var r = 1; r < v(t, n) + 1; r++) {
+                                e.push({
+                                    day: r,
+                                    weekday: s[m(t, n, r)]
+                                })
+                            }
+                            return e
+                        }
+
+                        function p() {
+                            f.empty();
+                            for (var e = 0; e < 7; e++) {
+                                f.append("<div>" + s[e].substring(0, 3) + "</div>")
+                            }
+                        }
+
+                        function d() {
+                            var t;
+                            var n = $("#calendar").css("width", e + "px");
+                            n.find(t = "#calendar_weekdays, #calendar_content").css("width", e + "px").find("div").css({
+                                width: e / 7 + "px",
+                                height: e / 7 + "px",
+                                "line-height": e / 7 + "px"
+                            });
+                            n.find("#calendar_header").css({
+                                height: e * (1 / 7) + "px"
+                            }).find('i[class^="icon-chevron"]').css("line-height", e * (1 / 7) + "px")
+                        }
+
+                        function v(e, t) {
+                            return (new Date(e, t, 0)).getDate()
+                        }
+
+                        function m(e, t, n) {
+                            return (new Date(e, t - 1, n)).getDay()
+                        }
+
+                        function g(e) {
+                            return y(new Date) == y(e)
+                        }
+
+                        function y(e) {
+                            return e.getFullYear() + "/" + (e.getMonth() + 1) + "/" + e.getDate()
+                        }
+
+                        function b() {
+                            var e = new Date;
+                            t = e.getFullYear();
+                            n = e.getMonth() + 1
+                        }
+                        var e = 480;
+                        var t = 2013;
+                        var n = 9;
+                        var r = [];
+                        var i = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
+                        var s = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                        var o = ["#16a085", "#1abc9c", "#c0392b", "#27ae60", "#FF6860", "#f39c12", "#f1c40f", "#e67e22", "#2ecc71", "#e74c3c", "#d35400", "#2c3e50"];
+                        var u = $("#calendar");
+                        var a = u.find("#calendar_header");
+                        var f = u.find("#calendar_weekdays");
+                        var l = u.find("#calendar_content");
+                        b();
+                        c();
+                        a.find('i[class^="icon-chevron"]').on("click", function() {
+                            var e = $(this);
+                            var r = function(e) {
+                                n = e == "next" ? n + 1 : n - 1;
+                                if (n < 1) {
+                                    n = 12;
+                                    t--
+                                } else if (n > 12) {
+                                    n = 1;
+                                    t++
+                                }
+                                c()
+                            };
+                            if (e.attr("class").indexOf("left") != -1) {
+                                r("previous")
+                            } else {
+                                r("next")
+                            }
+                        })
+                    })
+                </script>
+
+            </div>
         </div>
+
+    </div>
 
 </body>
 
